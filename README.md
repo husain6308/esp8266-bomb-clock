@@ -1,3 +1,5 @@
+The English translation is provided below.
+
 ESP8266 Bomb Clock
 
 A decorative ESP8266 desk clock inspired by the visual design of a fictional time bomb.
@@ -5,8 +7,6 @@ A decorative ESP8266 desk clock inspired by the visual design of a fictional tim
 The project uses an ESP8266 NodeMCU Amica, DS1307 RTC, TM1637 4-digit display and a passive buzzer to create a functional desk clock with a countdown-style alarm effect and a built-in web interface.
 
 ---
-
-🇮🇷 فارسی
 
 معرفی پروژه
 
@@ -18,7 +18,7 @@ ESP8266 Bomb Clock یک ساعت رومیزی دکوراتیو با طراحی �
 
 برای ایجاد افکت صوتی آلارم نیز از یک Passive Buzzer استفاده شده است. صدای آلارم به‌صورت یک افکت هشدار و شمارش معکوس طراحی شده تا ظاهر و فضای بمب ساعتی پروژه را کامل کند.
 
-این پروژه صرفاً یک پروژه DIY، سرگرمی و دکوراتیو است و هیچ کاربرد واقعی مرتبط با مواد منفجره یا سلاح ندارد.
+این پروژه صرفاً یک پروژه DIY، سرگرمی و دکوراتیو است.
 
 ---
 
@@ -51,14 +51,14 @@ Push Button| قطع آلارم
 
 ---
 
-🔌 اتصالات
+🔌 شماتیک (اتصالات)
 
 TM1637
 
 TM1637| ESP8266
 CLK| D2
 DIO| D1
-VCC| تغذیه مناسب ماژول
+VCC| 3.3v
 GND| GND
 
 DS1307
@@ -66,7 +66,7 @@ DS1307
 DS1307| ESP8266
 SCL| D1
 SDA| D2
-VCC| تغذیه مناسب ماژول
+VCC| 3.3v
 GND| GND
 
 Passive Buzzer
@@ -74,7 +74,7 @@ Passive Buzzer
 Buzzer| ESP8266
 I/O| D4
 GND| GND
-VCC| تغذیه مناسب ماژول
+VCC| 3.3v
 
 Alarm Stop Button
 
@@ -98,9 +98,6 @@ D4 → Passive Buzzer
 
 D5 → Alarm Stop Button
 
-این Repository مستندکننده نسخه فعلی پروژه است.
-
-در صورت طراحی نسخه سخت‌افزاری جدید، بهتر است اتصال TM1637 و DS1307 مجدداً بررسی شود و در صورت نیاز GPIOهای مستقل برای آن‌ها در نظر گرفته شود.
 
 ---
 
@@ -194,6 +191,7 @@ D5 ───── Push Button ───── GND
 ---
 
 📱 نصب Firmware با گوشی Android
+  (آپلود فایل با گوشی اندروید)
 
 یکی از ویژگی‌های مهم این پروژه این است که Firmware آن را می‌توان بدون کامپیوتر و مستقیماً با گوشی Android روی ESP8266 نصب کرد.
 
@@ -421,33 +419,7 @@ Project Status: Completed / Archived Firmware
 - تصاویر Web Server
 - آموزش نصب Firmware با Android
 - اطلاعات Web Server
-
----
-
-🔧 ایده‌های توسعه آینده
-
-در صورت ادامه توسعه پروژه، امکانات زیر می‌توانند اضافه شوند:
-
-- انتشار سورس کد اصلی ".ino"
-- بهبود طراحی سخت‌افزار
-- استفاده از GPIOهای مستقل برای TM1637 و DS1307
-- تنظیم خودکار زمان از طریق Wi-Fi
-- امکانات بیشتر برای Web Server
-- تنظیم شدت نور نمایشگر
-- نمایش ثانیه
-- الگوهای مختلف صدای آلارم
-- LED وضعیت
-- طراحی PCB اختصاصی
-- بهبود قاب و ظاهر پروژه
-- ذخیره تنظیمات بیشتر در حافظه
-
----
-
-⚠️ هشدار
-
-این پروژه یک وسیله دکوراتیو، سرگرمی و آموزشی است.
-
-اگرچه ظاهر پروژه از بمب ساعتی تخیلی الهام گرفته شده است، این وسیله هیچ ماده منفجره، سلاح یا عملکرد مخربی ندارد.
+  
 
 ---
 
@@ -472,8 +444,6 @@ The DS1307 is responsible for keeping the time, while the TM1637 displays the cu
 A passive buzzer provides a fictional countdown-style alarm effect that matches the visual theme of the project.
 
 The project is intended for decoration, entertainment, DIY electronics and experimentation only.
-
-It has no real explosive, weapon or destructive functionality.
 
 ---
 
@@ -502,7 +472,7 @@ TM1637
 TM1637| ESP8266
 CLK| D2
 DIO| D1
-VCC| Appropriate module supply
+VCC| 3.3v
 GND| GND
 
 DS1307
@@ -510,7 +480,7 @@ DS1307
 DS1307| ESP8266
 SCL| D1
 SDA| D2
-VCC| Appropriate module supply
+VCC| 3.3v
 GND| GND
 
 Passive Buzzer
@@ -518,7 +488,7 @@ Passive Buzzer
 Buzzer| ESP8266
 I/O| D4
 GND| GND
-VCC| Appropriate module supply
+VCC| 3.3v
 
 Alarm Stop Button
 
@@ -542,9 +512,6 @@ D4 → Passive Buzzer
 
 D5 → Alarm Stop Button
 
-These are the connections used by the current version.
-
-For future hardware revisions, the TM1637 and DS1307 connections should be reviewed and separate GPIO assignments may be preferable.
 
 ---
 
