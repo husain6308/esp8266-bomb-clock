@@ -357,6 +357,9 @@ ESPFlash-ESP32/ESP8266Flasher
 
 ![Android ESPFlash Firmware Upload](App.update.file.android.jpg)
 
+![Android ESPFlash Firmware Upload](App.environment.jpg)
+
+
 این تصویر محیط برنامه Android مورد استفاده برای نصب Firmware پروژه را نشان می‌دهد.
 
 ---
@@ -757,6 +760,8 @@ Baudrate:
 📷 Android Flashing App
 
 ![Android ESPFlash Firmware Upload](App.update.file.android.jpg)
+
+![Android ESPFlash Firmware Upload](App.environment.jpg)
 
 The image above shows the Android application used to install the firmware.
 
