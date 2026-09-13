@@ -352,9 +352,10 @@ Baudrate:
 
 ---
 
-📷 تصویر برنامه Android
+📷 تصویر برنامه Android 
+ESPFlash-ESP32/ESP8266Flasher
 
-"Android ESPFlash Firmware Upload" (App.update.file.android.jpg)
+![Android ESPFlash Firmware Upload](App.update.file.android.jpg)
 
 این تصویر محیط برنامه Android مورد استفاده برای نصب Firmware پروژه را نشان می‌دهد.
 
@@ -364,16 +365,24 @@ Baudrate:
 
 نمای ظاهری
 
-![ESP8266 Bomb Clock] (clock.jpg)
 
-![ESP8266 Bomb Clock] (clock2.jpg)
+![ESP8266 Bomb Clock](clock.jpg)
 
-Web Server
 
-![ESP8266 Bomb Clock Web Server] (Web.clock.jpg)
 
-![ESP8266 Bomb Clock Web Server] (Web.clock2.jpg)
 
+![ESP8266 Bomb Clock](clock2.jpg)
+
+
+
+
+
+![ESP8266 Bomb Clock Web Server](Web.clock.jpg)
+
+
+
+
+![ESP8266 Bomb Clock Web Server](Web.clock2.jpg)
 ---
 
 📦 Firmware
