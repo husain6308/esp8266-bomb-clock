@@ -1,55 +1,53 @@
 ESP8266 Bomb Clock
 
-🇮🇷 بخش فارسی
+A decorative ESP8266 desk clock inspired by the visual design of a fictional time bomb.
 
-⏰ معرفی پروژه
-
-ESP8266 Bomb Clock یک ساعت رومیزی دست‌ساز و دکوراتیو است که با استفاده از NodeMCU Amica ESP8266 ساخته شده و ظاهر آن عمداً شبیه یک بمب ساعتی طراحی شده است.
-
-هدف این پروژه سرگرمی، ساخت یک وسیله دکوراتیو و تجربه عملی در زمینه الکترونیک و برنامه‌نویسی بوده است.
-
-این پروژه از ابتدا توسط سازنده طراحی و ساخته شده و شامل یک ساعت دیجیتال، سیستم آلارم، ماژول RTC و یک بازر Passive است.
-
-«⚠️ این پروژه صرفاً یک وسیله الکترونیکی دکوراتیو و نمایشی است و کاربرد واقعی یا خطرناک ندارد.»
+The project uses an ESP8266 NodeMCU Amica, DS1307 RTC, TM1637 4-digit display and a passive buzzer to create a functional desk clock with a countdown-style alarm effect and a built-in web interface.
 
 ---
 
-📸 تصاویر پروژه
+🇮🇷 فارسی
 
-نمای روبه‌رو
+معرفی پروژه
 
-نمای بالا
+ESP8266 Bomb Clock یک ساعت رومیزی دکوراتیو با طراحی الهام‌گرفته از بمب ساعتی است که با استفاده از برد NodeMCU Amica ESP8266 ساخته شده است.
+
+هدف این پروژه، ایجاد یک وسیله الکترونیکی سرگرم‌کننده و دکوراتیو برای قرار دادن روی میز کار است.
+
+زمان توسط ماژول DS1307 RTC نگهداری می‌شود و ساعت روی نمایشگر TM1637 چهاررقمی نمایش داده می‌شود.
+
+برای ایجاد افکت صوتی آلارم نیز از یک Passive Buzzer استفاده شده است. صدای آلارم به‌صورت یک افکت هشدار و شمارش معکوس طراحی شده تا ظاهر و فضای بمب ساعتی پروژه را کامل کند.
+
+این پروژه صرفاً یک پروژه DIY، سرگرمی و دکوراتیو است و هیچ کاربرد واقعی مرتبط با مواد منفجره یا سلاح ندارد.
 
 ---
 
 ✨ امکانات
 
-- استفاده از NodeMCU Amica ESP8266
-- نمایش ساعت با نمایشگر TM1637 چهاررقمی
-- ساعت ۲۴ ساعته
-- استفاده از DS1307 برای نگهداری زمان
-- تنظیم ساعت از طریق Web Server
-- عملکرد کاملاً آفلاین
-- سیستم آلارم حدود ۴۰ ثانیه‌ای
-- بازر Passive
-- دکمه فیزیکی برای قطع آلارم
-- تغییر تدریجی سرعت بوق‌ها
-- تبدیل بوق‌های متناوب به صدای ممتد در پایان آلارم
-- تغذیه با باتری 18650
-- طراحی ظاهری شبیه بمب ساعتی
-- مناسب برای استفاده به عنوان ساعت و وسیله دکوراتیو
+- NodeMCU Amica ESP8266
+- DS1307 RTC برای نگهداری زمان
+- نمایش ساعت با TM1637 چهاررقمی
+- Passive Buzzer برای آلارم
+- کلید فیزیکی برای قطع آلارم
+- Web Server داخلی
+- ایجاد شبکه Wi-Fi توسط خود ESP8266
+- تنظیم ساعت از طریق مرورگر
+- تنظیم آلارم از طریق مرورگر
+- ذخیره تنظیمات در حافظه ESP8266
+- طراحی دکوراتیو با ظاهر بمب ساعتی
+- Firmware آماده برای ESP8266
+- امکان نصب Firmware با گوشی Android بدون نیاز به کامپیوتر
 
 ---
 
-🔧 قطعات استفاده‌شده
+🧩 قطعات استفاده‌شده
 
-قطعه| توضیحات
-NodeMCU Amica ESP8266| برد اصلی پروژه
-TM1637| نمایشگر ۴ رقمی
-DS1307| ماژول ساعت واقعی
+قطعه| توضیح
+NodeMCU Amica ESP8266| کنترلر اصلی
+DS1307 RTC| نگهداری زمان
+TM1637 4-Digit Display| نمایش ساعت
 Passive Buzzer| تولید صدای آلارم
-Push Button| دکمه قطع آلارم
-18650| باتری ۳.۷ ولتی
+Push Button| قطع آلارم
 
 ---
 
@@ -60,259 +58,440 @@ TM1637
 TM1637| ESP8266
 CLK| D2
 DIO| D1
+VCC| تغذیه مناسب ماژول
+GND| GND
 
 DS1307
 
 DS1307| ESP8266
 SCL| D1
 SDA| D2
+VCC| تغذیه مناسب ماژول
+GND| GND
 
 Passive Buzzer
 
 Buzzer| ESP8266
-Signal| D4
+I/O| D4
+GND| GND
+VCC| تغذیه مناسب ماژول
 
-دکمه قطع آلارم
+Alarm Stop Button
 
-دکمه بین پایه D5 و GND قرار گرفته است.
+کلید قطع آلارم بین D5 و GND متصل شده است.
 
-Button| ESP8266
-یک پایه| D5
-پایه دیگر| GND
-
----
-
-🕐 عملکرد ساعت
-
-نمایشگر TM1637 ساعت را به شکل زیر نمایش می‌دهد:
-
-HH:MM
-
-ساعت به صورت ۲۴ ساعته کار می‌کند.
-
-در این نسخه تاریخ نمایش داده نمی‌شود.
-
-تنظیم ساعت از طریق Web Server داخلی ESP8266 انجام می‌شود.
+D5 ───── Push Button ───── GND
 
 ---
 
-🚨 سیستم آلارم
+⚠️ نکته درباره اتصالات
 
-مدت زمان کل آلارم تقریباً ۴۰ ثانیه است.
+در نسخه فعلی پروژه از این GPIOها استفاده شده است:
 
-آلارم ابتدا با بوق‌های کوتاه و فاصله زیاد شروع می‌شود و سپس فاصله بین بوق‌ها به صورت تدریجی کاهش پیدا می‌کند.
+D1 → TM1637 DIO
+D1 → DS1307 SCL
 
-مشخصات آلارم
+D2 → TM1637 CLK
+D2 → DS1307 SDA
 
-- مدت روشن بودن هر بوق: تقریباً ۱۵۰ میلی‌ثانیه
-- فاصله اولیه بین بوق‌ها: تقریباً ۱۸۰۰ تا ۲۰۰۰ میلی‌ثانیه
-- کاهش فاصله بین بوق‌ها: تقریباً ۴۰ تا ۵۰ میلی‌ثانیه در هر مرحله
-- تعداد مراحل شتاب‌گیری: حدود ۴۵ بوق
-- کمترین فاصله نهایی: تقریباً ۶۰ تا ۷۰ میلی‌ثانیه
-- مدت مرحله شتاب‌گیری: حدود ۳۵ ثانیه
+D4 → Passive Buzzer
 
-در پایان، بوق‌های متناوب متوقف شده و بازر وارد حالت صدای ممتد می‌شود.
+D5 → Alarm Stop Button
 
-صدای نهایی
+این Repository مستندکننده نسخه فعلی پروژه است.
 
-در مرحله پایانی، بازر یک تون ممتد تقریباً:
+در صورت طراحی نسخه سخت‌افزاری جدید، بهتر است اتصال TM1637 و DS1307 مجدداً بررسی شود و در صورت نیاز GPIOهای مستقل برای آن‌ها در نظر گرفته شود.
 
-5000 Hz
+---
 
-را برای حدود:
+⏰ سیستم ساعت
 
-5 seconds
+ماژول DS1307 RTC وظیفه نگهداری زمان را بر عهده دارد.
 
-پخش می‌کند.
+ESP8266 زمان را از DS1307 دریافت کرده و آن را روی نمایشگر TM1637 نمایش می‌دهد.
 
-پس از پایان این تون، آلارم متوقف شده و سیستم وارد حالت سکوت می‌شود.
+ساختار کلی سیستم:
 
-روند کلی آلارم
-
-بوق‌های آرام و با فاصله زیاد
-          ↓
-کاهش تدریجی فاصله بوق‌ها
-          ↓
-بوق‌های بسیار سریع
-          ↓
-صدای ممتد 1000Hz
-          ↓
-پایان آلارم
-
-دکمه متصل به D5 برای قطع کردن آلارم استفاده می‌شود.
+                ┌──────────────┐
+                │    DS1307    │
+                │     RTC      │
+                └──────┬───────┘
+                       │
+                       │ Time
+                       ▼
+                ┌──────────────┐
+                │   ESP8266    │
+                │  Controller  │
+                └──────┬───────┘
+                       │
+              ┌────────┴────────┐
+              │                 │
+              ▼                 ▼
+       ┌──────────────┐  ┌──────────────┐
+       │    TM1637    │  │    Buzzer    │
+       │   Display    │  │    Alarm     │
+       └──────────────┘  └──────┬───────┘
+                                │
+                                │
+                           ┌────▼─────┐
+                           │    D5    │
+                           │   STOP   │
+                           └──────────┘
 
 ---
 
 🌐 Web Server
 
-این پروژه دارای یک Web Server داخلی است.
+این نسخه دارای Web Server داخلی ESP8266 است.
 
-از Web Server برای تنظیم ساعت و تنظیمات مربوط به آلارم استفاده می‌شود.
+ESP8266 پس از راه‌اندازی، یک شبکه Wi-Fi ایجاد می‌کند و برای دسترسی به پنل تنظیمات نیازی به مودم یا اینترنت ندارد.
 
-پروژه برای کارکرد اصلی خود به اینترنت نیاز ندارد و به صورت Offline طراحی شده است.
+Wi-Fi Access Point
 
-یعنی ESP8266 می‌تواند بدون اتصال به اینترنت، Web Server خود را اجرا کند و کاربر از طریق شبکه محلی ایجادشده توسط دستگاه به آن متصل شود.
+SSID: ESP8266-Clock
+Password: 12345678
+
+ورود به Web Server
+
+ابتدا با گوشی یا دستگاه دیگر به شبکه زیر متصل شوید:
+
+ESP8266-Clock
+
+سپس مرورگر را باز کرده و آدرس زیر را وارد کنید:
+
+http://192.168.4.1
+
+پس از باز شدن صفحه، پنل وب ساعت نمایش داده می‌شود.
 
 ---
 
-🔋 منبع تغذیه
+⚙️ تنظیم ساعت و آلارم
 
-در این پروژه از یک باتری قابل شارژ:
+از طریق Web Server می‌توان تنظیمات مربوط به ساعت و آلارم را انجام داد.
 
-3.7V 18650 Li-ion
+امکانات اصلی پنل:
+
+- تنظیم ساعت
+- تنظیم زمان آلارم
+- مدیریت تنظیمات آلارم
+- ذخیره تنظیمات
+- مشاهده اطلاعات مربوط به ساعت و آلارم
+
+تنظیمات در حافظه ESP8266 ذخیره می‌شوند تا پس از خاموش و روشن شدن دستگاه نیز حفظ شوند.
+
+---
+
+🚨 سیستم آلارم
+
+برای آلارم از یک Passive Buzzer استفاده شده است.
+
+صدای آلارم به‌صورت یک افکت هشدار و شمارش معکوس طراحی شده که با ظاهر بمب ساعتی پروژه هماهنگ است.
+
+آلارم را می‌توان با کلید فیزیکی متصل به D5 متوقف کرد.
+
+D5 ───── Push Button ───── GND
+
+---
+
+📱 نصب Firmware با گوشی Android
+
+یکی از ویژگی‌های مهم این پروژه این است که Firmware آن را می‌توان بدون کامپیوتر و مستقیماً با گوشی Android روی ESP8266 نصب کرد.
+
+برای این کار از برنامه:
+
+ESPFlash-ESP32/ESP8266Flasher
 
 استفاده شده است.
 
-⚠️ باتری 18650 در حالت شارژ کامل می‌تواند تا حدود 4.2V برسد. بنابراین نباید آن را بدون مدار مناسب مستقیماً به پایه 3.3V ESP8266 متصل کرد.
+برنامه از فلش کردن Firmware روی ESP8266 از طریق USB OTG پشتیبانی می‌کند.
 
-برای تغذیه NodeMCU از روش مناسب و پایدار استفاده کنید.
+برنامه مورد استفاده
 
----
+Google Play:
 
-🏗️ ساخت بدنه
-
-بدنه پروژه با استفاده از لوله ساخته شده است.
-
-هر قسمت لوله حدود:
-
-20 cm
-
-برش داده شده و با کاغذ رنگی قرمز پوشانده شده است.
-
-بردها و سیم‌کشی‌ها نیز به صورت قابل مشاهده روی بدنه نصب شده‌اند تا ظاهر پروژه بیشتر شبیه یک بمب ساعتی تخیلی باشد.
-
-این طراحی صرفاً برای ایجاد ظاهر دکوراتیو و نمایشی پروژه انجام شده است.
+https://play.google.com/store/apps/details?id=io.serialflow.espflash
 
 ---
 
-🎨 کاربرد پروژه
+📲 روش نصب Firmware
 
-این پروژه را می‌توان هم به عنوان:
+1. آماده‌سازی
 
-- ساعت رومیزی
-- وسیله دکوراتیو
-- پروژه آموزشی الکترونیک
-- پروژه سرگرمی و ساخت‌وساز
+موارد مورد نیاز:
 
-استفاده کرد.
+- گوشی Android
+- برد NodeMCU Amica ESP8266
+- کابل USB مناسب
+- در صورت نیاز مبدل USB OTG
+- فایل Firmware پروژه:
+
+esp8266-bomb-clock-v1.0.bin
+
+گوشی را از طریق USB به ESP8266 متصل کنید.
 
 ---
 
-💻 نرم‌افزار
+2. اجرای برنامه
 
-پروژه با استفاده از Arduino IDE توسعه داده شده است.
+برنامه ESPFlash-ESP32/ESP8266Flasher را باز کنید.
 
-برد مورد استفاده:
+در قسمت Firmware File روی علامت:
 
-NodeMCU Amica ESP8266
++
 
-فایل سورس اصلی ".ino" در حال حاضر در Repository موجود نیست و نسخه منتشرشده شامل فایل Firmware کامپایل‌شده است.
+بزنید.
+
+---
+
+3. اضافه کردن Firmware
+
+صفحه‌ای با عنوان:
+
+Add Firmware
+
+باز می‌شود.
+
+فایل زیر را از حافظه گوشی انتخاب کنید:
+
+esp8266-bomb-clock-v1.0.bin
+
+---
+
+4. تنظیم Address
+
+پس از اضافه کردن فایل، مقدار Address را روی:
+
+0x0000
+
+قرار دهید.
+
+تنظیمات مورد استفاده در نسخه فعلی:
+
+Firmware File:
+esp8266-bomb-clock-v1.0.bin
+
+Address:
+0x0000
+
+---
+
+5. High-Speed Mode
+
+در این پروژه گزینه زیر فعال بوده است:
+
+High-Speed Mode (Stub)
+
+این گزینه برای افزایش سرعت انتقال Firmware استفاده می‌شود.
+
+---
+
+6. Firmware Compress
+
+در نسخه‌ای که برای این پروژه استفاده شده، گزینه زیر نیز فعال بوده است:
+
+Firmware Compress
+
+این گزینه به حالت High-Speed Mode وابسته است و برای کاهش زمان انتقال Firmware استفاده می‌شود.
+
+---
+
+7. Baudrate
+
+مقدار Baudrate را روی:
+
+115200
+
+قرار دهید.
+
+تنظیمات نهایی مورد استفاده:
+
+High-Speed Mode (Stub): ON
+Firmware Compress: ON
+Baudrate: 115200
+
+---
+
+8. شروع Flash
+
+پس از انجام تنظیمات، روی دکمه Upload / Flash که با علامت فلش رو به پایین نمایش داده می‌شود بزنید.
+
+برنامه شروع به انتقال Firmware به ESP8266 می‌کند.
+
+منتظر بمانید تا عملیات کامل شود.
+
+---
+
+9. پایان عملیات
+
+پس از پایان موفقیت‌آمیز عملیات، برنامه پیام مربوط به کامل شدن عملیات Flash را نمایش می‌دهد.
+
+پس از اتمام Flash، ESP8266 را راه‌اندازی مجدد کنید.
+
+در صورت اجرای صحیح Firmware، دستگاه باید به حالت ساعت و Web Server پروژه وارد شود.
+
+---
+
+📌 تنظیمات Flash استفاده‌شده در این پروژه
+
+برای بازسازی همین نسخه Firmware، تنظیمات ثبت‌شده در این پروژه عبارت‌اند از:
+
+Firmware:
+esp8266-bomb-clock-v1.0.bin
+
+Address:
+0x0000
+
+High-Speed Mode (Stub):
+ON
+
+Firmware Compress:
+ON
+
+Baudrate:
+115200
+
+«این تنظیمات بر اساس روش واقعی استفاده‌شده برای نصب Firmware این پروژه ثبت شده‌اند. در صورت استفاده از Firmware یا برد متفاوت، ممکن است تنظیمات Flash متفاوت باشند.»
+
+---
+
+📷 تصویر برنامه Android
+
+"Android ESPFlash Firmware Upload" (App.update.file.android.jpg)
+
+این تصویر محیط برنامه Android مورد استفاده برای نصب Firmware پروژه را نشان می‌دهد.
+
+---
+
+📷 تصاویر پروژه
+
+نمای ظاهری
+
+"ESP8266 Bomb Clock" (clock.jpg)
+
+"ESP8266 Bomb Clock" (clock2.jpg)
+
+Web Server
+
+"ESP8266 Bomb Clock Web Server" (Web.clock.jpg)
+
+"ESP8266 Bomb Clock Web Server" (Web.clock2.jpg)
 
 ---
 
 📦 Firmware
 
-نسخه منتشرشده پروژه:
+نسخه فعلی Firmware پروژه:
 
 esp8266-bomb-clock-v1.0.bin
 
-این فایل Firmware کامپایل‌شده برای ESP8266 است.
+این فایل نسخه کامپایل‌شده Firmware برای ESP8266 است.
 
-نسخه
+Source Code
 
-v1.0
+در حال حاضر نسخه اصلی Arduino با پسوند ".ino" در دسترس نیست.
 
-برد هدف
+بنابراین Repository فعلی شامل:
 
-ESP8266
-NodeMCU Amica
+- Firmware کامپایل‌شده
+- مستندات پروژه
+- تصاویر سخت‌افزار
+- تصاویر Web Server
+- آموزش نصب Firmware
 
----
+است.
 
-📁 ساختار Repository
+فایل ".bin" یک Firmware کامپایل‌شده است و مانند فایل ".ino" قابل ویرایش مستقیم نیست.
 
-esp8266-bomb-clock/
-│
-├── README.md
-├── esp8266-bomb-clock-v1.0.bin
-├── clock.jpg
-└── clock2.jpg
+در صورت پیدا شدن سورس کد اصلی در آینده، می‌توان آن را به Repository اضافه کرد.
 
 ---
 
-📜 مجوز
+🛠️ وضعیت پروژه
 
-این پروژه تحت MIT License منتشر می‌شود.
+Project Status: Completed / Archived Firmware
 
-استفاده، مطالعه، تغییر و انتشار مجدد پروژه طبق شرایط این مجوز آزاد است.
+این Repository برای نگهداری، پشتیبان‌گیری و مستندسازی نسخه فعلی پروژه ایجاد شده است.
+
+موارد موجود:
+
+- Firmware کامپایل‌شده ESP8266
+- اطلاعات سخت‌افزار
+- شماتیک اتصالات
+- تصاویر پروژه
+- تصاویر Web Server
+- آموزش نصب Firmware با Android
+- اطلاعات Web Server
+
+---
+
+🔧 ایده‌های توسعه آینده
+
+در صورت ادامه توسعه پروژه، امکانات زیر می‌توانند اضافه شوند:
+
+- انتشار سورس کد اصلی ".ino"
+- بهبود طراحی سخت‌افزار
+- استفاده از GPIOهای مستقل برای TM1637 و DS1307
+- تنظیم خودکار زمان از طریق Wi-Fi
+- امکانات بیشتر برای Web Server
+- تنظیم شدت نور نمایشگر
+- نمایش ثانیه
+- الگوهای مختلف صدای آلارم
+- LED وضعیت
+- طراحی PCB اختصاصی
+- بهبود قاب و ظاهر پروژه
+- ذخیره تنظیمات بیشتر در حافظه
+
+---
+
+⚠️ هشدار
+
+این پروژه یک وسیله دکوراتیو، سرگرمی و آموزشی است.
+
+اگرچه ظاهر پروژه از بمب ساعتی تخیلی الهام گرفته شده است، این وسیله هیچ ماده منفجره، سلاح یا عملکرد مخربی ندارد.
 
 ---
 
 👤 سازنده
 
-SAIN
+HUSAIN
 
-یک پروژه DIY در زمینه الکترونیک، میکروکنترلر و ساخت وسایل دست‌ساز.
-
----
-
-🇬🇧 English Section
-
-⏰ About the Project
-
-ESP8266 Bomb Clock is a DIY decorative desk clock built around a NodeMCU Amica ESP8266.
-
-The device was intentionally designed with a fictional bomb-clock-inspired appearance for entertainment, decoration and hands-on electronics experimentation.
-
-The project was designed and built from scratch by the author and combines a digital clock, RTC module, alarm system and passive buzzer.
-
-«⚠️ This is a decorative and fictional electronic project. It is not intended for any dangerous or harmful purpose.»
+Designed, assembled and developed as a personal DIY electronics project.
 
 ---
 
-📸 Project Photos
+🇬🇧 English
 
-Front View
+Project Overview
 
-Top View
+ESP8266 Bomb Clock is a decorative desk clock inspired by the visual design of a fictional time bomb.
+
+The project was built using an ESP8266 NodeMCU Amica, a DS1307 Real-Time Clock, a TM1637 4-digit display, and a passive buzzer.
+
+The DS1307 is responsible for keeping the time, while the TM1637 displays the current time.
+
+A passive buzzer provides a fictional countdown-style alarm effect that matches the visual theme of the project.
+
+The project is intended for decoration, entertainment, DIY electronics and experimentation only.
+
+It has no real explosive, weapon or destructive functionality.
 
 ---
 
 ✨ Features
 
 - NodeMCU Amica ESP8266
+- DS1307 Real-Time Clock
 - TM1637 4-digit display
-- 24-hour clock
-- DS1307 real-time clock
-- Local Web Server for clock configuration
-- Offline operation
 - Passive buzzer alarm
 - Physical alarm stop button
-- Approximately 40-second alarm sequence
-- Progressive alarm acceleration
-- Final continuous tone
-- 18650 rechargeable battery
-- Bomb-clock-inspired decorative design
-- Can be used as both a desk clock and a decorative object
-
----
-
-🔧 Hardware
-
-Component| Description
-NodeMCU Amica ESP8266| Main controller
-TM1637| 4-digit display
-DS1307| Real-time clock module
-Passive Buzzer| Alarm sound
-Push Button| Alarm stop button
-18650| 3.7 V Li-ion battery
-
-Components not used in v1.0
-
-- Relay
-- LED
-- Sensors
-- Date display
+- Built-in ESP8266 Web Server
+- Standalone Wi-Fi Access Point
+- Clock configuration through a web browser
+- Alarm configuration through a web browser
+- Settings stored in ESP8266 memory
+- Decorative time-bomb-inspired design
+- Ready-to-use compiled firmware
+- Android-based firmware flashing without a PC
 
 ---
 
@@ -323,204 +502,391 @@ TM1637
 TM1637| ESP8266
 CLK| D2
 DIO| D1
+VCC| Appropriate module supply
+GND| GND
 
 DS1307
 
 DS1307| ESP8266
 SCL| D1
 SDA| D2
+VCC| Appropriate module supply
+GND| GND
 
 Passive Buzzer
 
 Buzzer| ESP8266
-Signal| D4
+I/O| D4
+GND| GND
+VCC| Appropriate module supply
 
 Alarm Stop Button
 
-The button is connected between D5 and GND.
+The alarm stop button is connected between D5 and GND.
 
-Button| ESP8266
-One side| D5
-Other side| GND
+D5 ───── Push Button ───── GND
 
 ---
 
-🕐 Clock
+⚠️ Wiring Note
 
-The TM1637 display shows the time in:
+The current version uses:
 
-HH:MM
+D1 → TM1637 DIO
+D1 → DS1307 SCL
 
-format.
+D2 → TM1637 CLK
+D2 → DS1307 SDA
 
-The clock uses a 24-hour format.
+D4 → Passive Buzzer
 
-Date display is not included in v1.0.
+D5 → Alarm Stop Button
 
-The clock can be configured through the ESP8266's local Web Server.
+These are the connections used by the current version.
+
+For future hardware revisions, the TM1637 and DS1307 connections should be reviewed and separate GPIO assignments may be preferable.
 
 ---
 
-🚨 Alarm System
+⏰ Clock System
 
-The complete alarm sequence lasts approximately 40 seconds.
+The DS1307 RTC keeps the current time.
 
-The alarm starts with short beeps separated by relatively long intervals. The interval gradually decreases, making the alarm progressively faster.
+The ESP8266 reads the time from the RTC and drives the TM1637 display.
 
-Alarm characteristics
-
-- Beep duration: approximately 150 ms
-- Initial silent interval: approximately 1800–2000 ms
-- Interval reduction: approximately 40–50 ms per stage
-- Approximately 45 acceleration stages
-- Final interval: approximately 60–70 ms
-- Acceleration phase: approximately 35 seconds
-
-At the end of the acceleration sequence, the buzzer changes from individual beeps to a continuous tone.
-
-Final tone
-
-The final stage produces a continuous tone of approximately:
-
-5000 Hz
-
-for approximately:
-
-5 seconds
-
-After the final tone, the alarm stops and the buzzer becomes silent.
-
-Alarm sequence
-
-Slow beeps
-     ↓
-Progressively faster beeps
-     ↓
-Very short intervals
-     ↓
-Continuous 5000 Hz tone
-     ↓
-Alarm stops
-
-The physical button connected to D5 can be used to stop the alarm.
+                ┌──────────────┐
+                │    DS1307    │
+                │     RTC      │
+                └──────┬───────┘
+                       │
+                       │ Time
+                       ▼
+                ┌──────────────┐
+                │   ESP8266    │
+                │  Controller  │
+                └──────┬───────┘
+                       │
+              ┌────────┴────────┐
+              │                 │
+              ▼                 ▼
+       ┌──────────────┐  ┌──────────────┐
+       │    TM1637    │  │    Buzzer    │
+       │   Display    │  │    Alarm     │
+       └──────────────┘  └──────┬───────┘
+                                │
+                           ┌────▼─────┐
+                           │    D5    │
+                           │   STOP   │
+                           └──────────┘
 
 ---
 
 🌐 Web Server
 
-The project includes a built-in local Web Server.
+This version includes a built-in ESP8266 Web Server.
 
-The Web Server is used to configure the clock and alarm settings.
+The ESP8266 creates its own Wi-Fi Access Point, so the configuration page can be accessed directly from a phone without requiring an external router or Internet connection.
 
-The project is designed to operate offline and does not require an internet connection for its main functions.
+Wi-Fi Access Point
 
-The ESP8266 can provide its own local network access so the user can connect to the Web Server and configure the device.
+SSID: ESP8266-Clock
+Password: 12345678
 
----
+Accessing the Web Interface
 
-🔋 Power
+Connect your phone to:
 
-The prototype uses a rechargeable:
+ESP8266-Clock
 
-3.7 V 18650 Li-ion battery
+Then open:
 
-⚠️ A fully charged 18650 cell can reach approximately 4.2 V. Do not connect an unregulated Li-ion cell directly to the ESP8266 3.3 V pin.
+http://192.168.4.1
 
-Use an appropriate and stable power method for the NodeMCU board.
-
----
-
-🏗️ Physical Design
-
-The body was built using tubes.
-
-Each tube section is approximately:
-
-20 cm
-
-long and covered with red-colored paper.
-
-The electronic boards and wiring are intentionally mounted visibly on the body to enhance the fictional bomb-clock appearance.
-
-This design is purely decorative and intended to create the visual style of a fictional bomb-clock prop.
+The project web interface should then be displayed.
 
 ---
 
-🎨 Intended Use
+⚙️ Clock and Alarm Configuration
 
-The project can be used as:
+The Web Server allows the user to configure the clock and alarm.
 
-- A desk clock
-- A decorative object
-- An electronics learning project
-- A DIY maker project
-- An entertainment project
+Main functions include:
+
+- Setting the clock
+- Setting the alarm time
+- Managing alarm settings
+- Saving settings
+- Viewing clock and alarm information
+
+The settings are stored in ESP8266 memory and can remain available after restarting the device.
 
 ---
 
-💻 Software
+🚨 Alarm
 
-The project was developed using:
+A passive buzzer is used for the alarm system.
 
-- Arduino IDE
-- ESP8266 Arduino platform
+The alarm sound is designed as a fictional warning and countdown-style effect inspired by movie-style time-bomb props.
 
-Target board:
+The physical button connected to D5 can be used to stop the alarm.
 
-NodeMCU Amica ESP8266
+D5 ───── Push Button ───── GND
 
-The original Arduino ".ino" source code is not currently included in the repository.
+---
 
-The currently released firmware is the compiled binary version.
+📱 Flashing the Firmware from Android
+
+The firmware can be installed on the ESP8266 directly from an Android phone without using a computer.
+
+The application used to flash this project is:
+
+ESPFlash-ESP32/ESP8266Flasher
+
+Google Play:
+
+https://play.google.com/store/apps/details?id=io.serialflow.espflash
+
+---
+
+Requirements
+
+- Android phone
+- NodeMCU Amica ESP8266
+- USB cable
+- USB OTG adapter if required
+- Project firmware:
+
+esp8266-bomb-clock-v1.0.bin
+
+---
+
+Flashing Procedure
+
+1. Connect the ESP8266
+
+Connect the NodeMCU ESP8266 to the Android phone using USB and OTG.
+
+Open the ESPFlash-ESP32/ESP8266Flasher application.
+
+---
+
+2. Add the Firmware
+
+In the Firmware File section, press:
+
++
+
+Select:
+
+esp8266-bomb-clock-v1.0.bin
+
+The firmware should then appear under the Add Firmware section.
+
+---
+
+3. Set the Address
+
+Set the firmware address to:
+
+0x0000
+
+The configuration used for this project is:
+
+Firmware File:
+esp8266-bomb-clock-v1.0.bin
+
+Address:
+0x0000
+
+---
+
+4. Enable High-Speed Mode
+
+Enable:
+
+High-Speed Mode (Stub)
+
+This option is used in the tested flashing procedure for this project.
+
+---
+
+5. Enable Firmware Compress
+
+Enable:
+
+Firmware Compress
+
+The tested configuration uses both High-Speed Mode and Firmware Compress.
+
+---
+
+6. Set Baudrate
+
+Set:
+
+Baudrate: 115200
+
+Final tested settings:
+
+High-Speed Mode (Stub): ON
+Firmware Compress: ON
+Baudrate: 115200
+
+---
+
+7. Start Flashing
+
+Press the Flash / Upload button represented by the downward arrow.
+
+The application will begin transferring the firmware to the ESP8266.
+
+Wait until the operation has completed.
+
+---
+
+8. Flash Complete
+
+After the firmware has been successfully written, the application displays a completion message indicating that the flash operation has finished.
+
+Restart the ESP8266 if necessary.
+
+After successful installation, the ESP8266 should start the Bomb Clock firmware.
+
+---
+
+📌 Tested Flash Configuration
+
+The following configuration was used successfully with the firmware in this repository:
+
+Firmware:
+esp8266-bomb-clock-v1.0.bin
+
+Address:
+0x0000
+
+High-Speed Mode (Stub):
+ON
+
+Firmware Compress:
+ON
+
+Baudrate:
+115200
+
+«These settings document the flashing procedure used for this specific firmware. Different ESP8266 boards or different firmware builds may require different flashing settings.»
+
+---
+
+📷 Android Flashing App
+
+"Android ESPFlash Firmware Upload" (App.update.file.android.jpg)
+
+The image above shows the Android application used to install the firmware.
+
+---
+
+📷 Project Photos
+
+Hardware
+
+"ESP8266 Bomb Clock" (clock.jpg)
+
+"ESP8266 Bomb Clock" (clock2.jpg)
+
+Web Interface
+
+"ESP8266 Bomb Clock Web Server" (Web.clock.jpg)
+
+"ESP8266 Bomb Clock Web Server" (Web.clock2.jpg)
 
 ---
 
 📦 Firmware
 
-Released firmware:
+Current firmware:
 
 esp8266-bomb-clock-v1.0.bin
 
-Version
+This is the compiled firmware image for the ESP8266.
 
-v1.0
+Source Code
 
-Target
+The original Arduino ".ino" source code is currently unavailable.
 
-ESP8266
-NodeMCU Amica
+Therefore, this repository currently contains:
 
----
+- Compiled firmware
+- Hardware documentation
+- Project photographs
+- Web Server screenshots
+- Android flashing instructions
 
-📁 Repository Structure
+The ".bin" file is a compiled firmware image and cannot be edited directly like the original ".ino" source code.
 
-esp8266-bomb-clock/
-│
-├── README.md
-├── esp8266-bomb-clock-v1.0.bin
-├── clock.jpg
-└── clock2.jpg
+If the original source code is recovered in the future, it can be added to this repository.
 
 ---
 
-📜 License
+🛠️ Project Status
 
-This project is released under the MIT License.
+Project Status: Completed / Archived Firmware
 
-You are free to use, modify and redistribute the project according to the terms of the license.
+This repository was created to preserve, back up and document the current version of the project.
+
+The repository contains:
+
+- Compiled ESP8266 firmware
+- Hardware information
+- Wiring documentation
+- Project photographs
+- Web Server screenshots
+- Android firmware flashing instructions
+
+---
+
+🔧 Future Improvements
+
+Possible future improvements include:
+
+- Recovering and publishing the original ".ino" source code
+- Improved hardware design
+- Separate GPIO assignments for TM1637 and DS1307
+- Wi-Fi time synchronization
+- More advanced Web Server controls
+- Display brightness control
+- Seconds display
+- Multiple alarm sound patterns
+- Status LED
+- Custom PCB
+- Improved enclosure
+- Additional persistent settings
+
+---
+
+⚠️ Disclaimer
+
+This is a decorative, entertainment and educational electronics project.
+
+Although its appearance is inspired by a fictional time bomb, the device contains no explosive material, weapon functionality or destructive mechanism.
 
 ---
 
 👤 Author
 
-SAIN
+HUSAIN
 
-A DIY project focused on electronics, microcontrollers and hands-on hardware building.
+Designed, assembled and developed as a personal DIY electronics project.
 
 ---
 
-⭐ ESP8266 Bomb Clock
+📄 Repository Contents
 
-Version 1.0
-
-Built for learning, experimentation, entertainment and decoration.
+esp8266-bomb-clock
+│
+├── README.md
+├── esp8266-bomb-clock-v1.0.bin
+├── clock.jpg
+├── clock2.jpg
+├── Web.clock.jpg
+├── Web.clock2.jpg
+└── App.update.file.android.jpg
