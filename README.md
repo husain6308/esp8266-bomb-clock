@@ -383,6 +383,7 @@ ESPFlash-ESP32/ESP8266Flasher
 
 
 ![ESP8266 Bomb Clock Web Server](Web.clock2.jpg)
+
 ---
 
 📦 Firmware
@@ -755,7 +756,7 @@ Baudrate:
 
 📷 Android Flashing App
 
-"Android ESPFlash Firmware Upload" (App.update.file.android.jpg)
+![Android ESPFlash Firmware Upload](App.update.file.android.jpg)
 
 The image above shows the Android application used to install the firmware.
 
@@ -765,15 +766,13 @@ The image above shows the Android application used to install the firmware.
 
 Hardware
 
-"ESP8266 Bomb Clock" (clock.jpg)
+![ESP8266 Bomb Clock](clock.jpg)
 
-"ESP8266 Bomb Clock" (clock2.jpg)
+![ESP8266 Bomb Clock](clock2.jpg)
 
-Web Interface
+![ESP8266 Bomb Clock Web Server](Web.clock.jpg)
 
-"ESP8266 Bomb Clock Web Server" (Web.clock.jpg)
-
-"ESP8266 Bomb Clock Web Server" (Web.clock2.jpg)
+![ESP8266 Bomb Clock Web Server](Web.clock2.jpg)
 
 ---
 
