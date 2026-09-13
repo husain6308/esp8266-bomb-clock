@@ -364,15 +364,15 @@ Baudrate:
 
 نمای ظاهری
 
-!"ESP8266 Bomb Clock" (clock.jpg)
+![ESP8266 Bomb Clock] (clock.jpg)
 
-!"ESP8266 Bomb Clock" (clock2.jpg)
+![ESP8266 Bomb Clock] (clock2.jpg)
 
 Web Server
 
-!"ESP8266 Bomb Clock Web Server" (Web.clock.jpg)
+![ESP8266 Bomb Clock Web Server] (Web.clock.jpg)
 
-!"ESP8266 Bomb Clock Web Server" (Web.clock2.jpg)
+![ESP8266 Bomb Clock Web Server] (Web.clock2.jpg)
 
 ---
 
