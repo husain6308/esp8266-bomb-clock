@@ -378,6 +378,7 @@ ESPFlash-ESP32/ESP8266Flasher
 
 
 
+📷تصاویر وب سرور
 
 
 ![ESP8266 Bomb Clock Web Server](Web.clock.jpg)
