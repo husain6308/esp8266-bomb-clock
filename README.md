@@ -1,3 +1,8 @@
+[![Release](https://img.shields.io/github/v/release/husain6308/esp8266-bomb-clock?label=Release)](https://github.com/husain6308/esp8266-bomb-clock/releases)
+[![License](https://img.shields.io/github/license/husain6308/esp8266-bomb-clock)](LICENSE)
+[![GitHub repo](https://img.shields.io/badge/GitHub-Repository-black?logo=github)](https://github.com/husain6308/esp8266-bomb-clock)
+
+# ESP8266 Bomb Clock
 The English translation is provided below.
 
 ## 📚 Documentation
