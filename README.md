@@ -1,5 +1,12 @@
 The English translation is provided below.
 
+## 📚 Documentation
+
+- [Hardware Documentation](HARDWARE.md)
+- [Firmware Documentation](FIRMWARE.md)
+- [Changelog](CHANGELOG.md)
+- [License](LICENSE)
+
 ESP8266 Bomb Clock
 
 A decorative ESP8266 desk clock inspired by the visual design of a fictional time bomb.
