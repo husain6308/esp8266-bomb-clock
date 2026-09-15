@@ -3,7 +3,7 @@ message: "If you use this project, please cite it as follows."
 title: "ESP8266 Bomb Clock"
 type: software
 version: 1.0.0
-date-released: 2026-09-11
+date-released: 2026-09-13
 repository-code: "https://github.com/husain6308/esp8266-bomb-clock"
 
 authors:
