@@ -1,0 +1,29 @@
+# Arduino
+*.ino.cpp
+*.ino.elf
+*.ino.map
+
+# Build files
+build/
+build-*/
+out/
+*.o
+*.a
+*.elf
+*.map
+
+# ArduinoDroid / temporary files
+*.tmp
+*.bak
+*.log
+
+# Editor files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary firmware files
+*.bin.tmp
