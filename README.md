@@ -367,9 +367,9 @@ Baudrate:
 📷 تصویر برنامه Android 
 ESPFlash-ESP32/ESP8266Flasher
 
-![Android ESPFlash Firmware Upload](App.update.file.android.jpg)
+![Android ESPFlash Firmware Upload](images/App.update.file.android.jpg)
 
-![Android ESPFlash Firmware Upload](App.environment.jpg)
+![Android ESPFlash Firmware Upload](images/App.environment.jpg)
 
 
 این تصویر محیط برنامه Android مورد استفاده برای نصب Firmware پروژه را نشان می‌دهد.
@@ -381,24 +381,24 @@ ESPFlash-ESP32/ESP8266Flasher
 نمای ظاهری
 
 
-![ESP8266 Bomb Clock](clock.jpg)
+![ESP8266 Bomb Clock](images/clock.jpg)
 
 
 
 
-![ESP8266 Bomb Clock](clock2.jpg)
+![ESP8266 Bomb Clock](images/clock2.jpg)
 
 
 
 📷تصاویر وب سرور
 
 
-![ESP8266 Bomb Clock Web Server](Web.clock.jpg)
+![ESP8266 Bomb Clock Web Server](images/Web.clock.jpg)
 
 
 
 
-![ESP8266 Bomb Clock Web Server](Web.clock2.jpg)
+![ESP8266 Bomb Clock Web Server](images/Web.clock2.jpg)
 
 ---
 
@@ -772,9 +772,9 @@ Baudrate:
 
 📷 Android Flashing App
 
-![Android ESPFlash Firmware Upload](App.update.file.android.jpg)
+![Android ESPFlash Firmware Upload](images/App.update.file.android.jpg)
 
-![Android ESPFlash Firmware Upload](App.environment.jpg)
+![Android ESPFlash Firmware Upload](images/App.environment.jpg)
 
 The image above shows the Android application used to install the firmware.
 
@@ -784,13 +784,15 @@ The image above shows the Android application used to install the firmware.
 
 Hardware
 
-![ESP8266 Bomb Clock](clock.jpg)
+![ESP8266 Bomb Clock](images/clock.jpg)
 
-![ESP8266 Bomb Clock](clock2.jpg)
+![ESP8266 Bomb Clock](images/clock2.jpg)
 
-![ESP8266 Bomb Clock Web Server](Web.clock.jpg)
+📷 Web server images
 
-![ESP8266 Bomb Clock Web Server](Web.clock2.jpg)
+![ESP8266 Bomb Clock Web Server](images/Web.clock.jpg)
+
+![ESP8266 Bomb Clock Web Server](images/Web.clock2.jpg)
 
 ---
 
