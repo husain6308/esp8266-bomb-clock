@@ -78,24 +78,35 @@ Push Button| قطع آلارم
 TM1637
 
 TM1637| ESP8266
+
 CLK| D2
+
 DIO| D1
+
 VCC| 3.3v
+
 GND| GND
 
 DS1307
 
 DS1307| ESP8266
+
 SCL| D1
+
 SDA| D2
+
 VCC| 3.3v
+
 GND| GND
 
 Passive Buzzer
 
 Buzzer| ESP8266
+
 I/O| D4
+
 GND| GND
+
 VCC| 3.3v
 
 Alarm Stop Button
@@ -103,71 +114,24 @@ Alarm Stop Button
 کلید قطع آلارم بین D5 و GND متصل شده است.
 
 D5 ───── Push Button ───── GND
+---
+## 🔌 شماتیک اتصالات (Wiring Diagram)
 
-🔌 شماتیک اتصالات (Wiring Diagram)
-
-                         ┌─────────────────────┐
-                         │   NodeMCU ESP8266    │
-                         │      (Amica)          │
-                         └───────────┬───────────┘
-                                     │
-        ┌────────────┬──────────────┼──────────────┬────────────┐
-        │            │              │              │            │
-       D1           D2             D4             D5          3.3V/GND
-        │            │              │              │              │
-   ┌────┴────┐  ┌────┴────┐   ┌────┴────┐   ┌─────┴─────┐  (مشترک بین همه)
-   │ TM1637  │  │ TM1637  │   │ Passive │   │   Push    │
-   │  DIO    │  │  CLK    │   │ Buzzer  │   │  Button   │
-   └─────────┘  └─────────┘   │  I/O    │   │  (Stop)   │
-        │            │        └─────────┘   └─────┬─────┘
-   ┌────┴────┐  ┌────┴────┐                        │
-   │ DS1307  │  │ DS1307  │                        GND
-   │  SCL    │  │  SDA    │
-   └─────────┘  └─────────┘
-
-⚠️ توجه: پایه‌های D1 و D2 به‌صورت مشترک بین TM1637 و DS1307 استفاده شده‌اند.
-
-پایه قطعه
-پایه ESP8266
-TM1637
-CLK
-D2
-TM1637
-DIO
-D1
-TM1637
-VCC
-3.3V
-TM1637
-GND
-GND
-DS1307
-SCL
-D1
-DS1307
-SDA
-D2
-DS1307
-VCC
-3.3V
-DS1307
-GND
-GND
-Passive Buzzer
-I/O
-D4
-Passive Buzzer
-VCC
-3.3V
-Passive Buzzer
-GND
-GND
-Push Button (Stop)
-پایه ۱
-D5
-Push Button (Stop)
-پایه ۲
-GND
+| قطعه | پایه قطعه | پایه ESP8266 |
+|---|---|---|
+| TM1637 | CLK | D2 |
+| TM1637 | DIO | D1 |
+| TM1637 | VCC | 3.3V |
+| TM1637 | GND | GND |
+| DS1307 | SCL | D1 |
+| DS1307 | SDA | D2 |
+| DS1307 | VCC | 3.3V |
+| DS1307 | GND | GND |
+| Passive Buzzer | I/O | D4 |
+| Passive Buzzer | VCC | 3.3V |
+| Passive Buzzer | GND | GND |
+| Push Button (Stop) | پایه ۱ | D5 |
+| Push Button (Stop) | پایه ۲ | GND |
 ---
 
 ⚠️ نکته درباره اتصالات
