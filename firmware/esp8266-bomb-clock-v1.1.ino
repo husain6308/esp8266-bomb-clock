@@ -14,7 +14,7 @@
 #define RELAY_ON  LOW
 #define RELAY_OFF HIGH
 
-const char* AP_SSID = "ESP8266-Clock-V2";
+const char* AP_SSID = "ESP8266-Clock-v1.1";
 const char* AP_PASSWORD = "sain6308";
 
 WiFiServer server(80);
