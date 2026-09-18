@@ -19,17 +19,6 @@ A decorative ESP8266 desk clock inspired by the visual design of a fictional tim
 The project uses an ESP8266 NodeMCU Amica, DS1307 RTC, TM1637 4-digit display and a passive buzzer to create a functional desk clock with a countdown-style alarm effect and a built-in web interface.
 
 ---
-## 📦 Firmware
-
-Download the latest stable firmware:
-
-**[⬇️ Download ESP8266 Bomb Clock v1.0.0](https://github.com/husain6308/esp8266-bomb-clock/releases/download/v1.0.0/esp8266-bomb-clock-v1.0.bin)**
-
-Firmware:
-- Version: `v1.0.0`
-- Target: NodeMCU Amica ESP8266
-- File: `esp8266-bomb-clock-v1.0.bin`
-- Flash address: `0x0000`
 
 معرفی پروژه
 
