@@ -33,6 +33,18 @@ ESP8266 Bomb Clock یک ساعت رومیزی دکوراتیو با طراحی �
 این پروژه صرفاً یک پروژه DIY، سرگرمی و دکوراتیو است.
 
 ---
+## 📦 Firmware
+
+Download the latest stable firmware:
+
+**[⬇️ Download ESP8266 Bomb Clock v1.0.0](https://github.com/husain6308/esp8266-bomb-clock/releases/download/v1.0.0/esp8266-bomb-clock-v1.0.bin)**
+
+Firmware:
+- Version: `v1.0.0`
+- Target: NodeMCU Amica ESP8266
+- File: `esp8266-bomb-clock-v1.0.bin`
+- Flash address: `0x0000`
+---
 ✨ امکانات
 
 - NodeMCU Amica ESP8266
