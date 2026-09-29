@@ -41,6 +41,7 @@ ESP8266 Bomb Clock یک ساعت رومیزی دکوراتیو با طراحی �
 - فایل: `esp8266-bomb-clock-v1.0.bin`
 
 ⬇️ [Download ESP8266 Bomb Clock v1.1.0](https://github.com/husain6308/esp8266-bomb-clock/releases/download/V1.0.0/esp8266-bomb-clock-v1.1.ino)
+
 مشخصات فریمور:
 - نسخه: `v1.1.0`
 - برد هدف: NodeMCU Amica ESP8266
