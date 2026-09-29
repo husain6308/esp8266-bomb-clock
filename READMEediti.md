@@ -31,16 +31,6 @@ ESP8266 Bomb Clock
 
 <p dir="rtl">⬇️ <a href="https://github.com/husain6308/esp8266-bomb-clock/releases/download/V1.0.0/esp8266-bomb-clock-v1.1.ino">Download ESP8266 Bomb Clock v1.1.0</a></p>
 
-<p dir="rtl">مشخصات:</p>
-
-<ul dir="rtl">
-<li>نسخه: <code>v1.1.0</code></li>
-<li>برد هدف: <b>NodeMCU Amica ESP8266</b></li>
-<li>فایل: <code>esp8266-bomb-clock-v1.1.ino</code></li>
-</ul>
-
----
-
 <h3 dir="rtl">مشخصات:</h3>
 
 <ul dir="rtl">
