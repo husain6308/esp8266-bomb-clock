@@ -38,7 +38,53 @@ ESP8266 Bomb Clock
 <li>برد هدف: <b>NodeMCU Amica ESP8266</b></li>
 <li>فایل: <code>esp8266-bomb-clock-v1.1.ino</code></li>
 </ul>
+
 ---
+
+<h3 dir="rtl">مشخصات:</h3>
+
+<ul dir="rtl">
+<li>نسخه: <code>v1.1.0</code></li>
+<li>برد هدف: <b>NodeMCU Amica ESP8266</b></li>
+<li>فایل: <code>esp8266-bomb-clock-v1.1.ino</code></li>
+</ul>
+
+<hr>
+
+<h2 dir="rtl">✨ امکانات</h2>
+
+<ul dir="rtl">
+<li><b>NodeMCU Amica ESP8266</b></li>
+<li><b>DS1307 RTC</b> برای نگهداری زمان</li>
+<li>نمایش ساعت با <b>TM1637</b> چهاررقمی</li>
+<li><b>Passive Buzzer</b> برای آلارم</li>
+<li>کلید فیزیکی برای قطع آلارم</li>
+<li><b>Web Server</b> داخلی</li>
+<li>ایجاد شبکه <b>Wi-Fi</b> توسط خود ESP8266</li>
+<li>تنظیم ساعت از طریق مرورگر</li>
+<li>تنظیم آلارم از طریق مرورگر</li>
+<li>ذخیره تنظیمات در حافظه ESP8266</li>
+<li>طراحی دکوراتیو با ظاهر بمب ساعتی</li>
+<li><b>Firmware</b> آماده برای ESP8266</li>
+<li>امکان نصب <b>Firmware</b> با گوشی <b>Android</b> بدون نیاز به کامپیوتر</li>
+</ul>
+
+<h2 dir="rtl">✨ تغییرات v1.1.0</h2>
+
+<ul dir="rtl">
+<li>اضافه شدن رله هنگام آلارم</li>
+<li>کنترل دستی رله از <b>Web Server</b> اضافه شده</li>
+<li>چشمک زدن نمایشگر هنگام آلارم</li>
+<li>تغییر <b>Wi-Fi Access Point</b></li>
+<li>تغییر <b>Password</b></li>
+<li>آدرس <b>Web Server</b> همچنان <code>http://192.168.4.1</code></li>
+<li>صفحه <b>Settings</b> در <b>Web Server</b> گسترده‌تر شده</li>
+</ul>
+
+---
+
+
+
 ✨ امکانات
 
 
