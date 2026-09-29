@@ -76,14 +76,15 @@ ESP8266 Bomb Clock یک ساعت رومیزی دکوراتیو با طراحی �
 
 ---
 
-🧩 قطعات استفاده‌شده
+## 🧩 قطعات استفاده‌شده
 
-قطعه| توضیح
-NodeMCU Amica ESP8266| کنترلر اصلی
-DS1307 RTC| نگهداری زمان
-TM1637 4-Digit Display| نمایش ساعت
-Passive Buzzer| تولید صدای آلارم
-Push Button| قطع آلارم
+| قطعه | توضیح |
+|:---:|:---:|
+| NodeMCU Amica ESP8266 | کنترلر اصلی |
+| DS1307 RTC | نگهداری زمان |
+| TM1637 4-Digit Display | نمایش ساعت |
+| Passive Buzzer | تولید صدای آلارم |
+| Push Button | قطع آلارم |
 
 ---
 ## 🔌 شماتیک اتصالات (Wiring Diagram)
