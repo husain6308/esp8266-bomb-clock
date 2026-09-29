@@ -109,6 +109,15 @@ ESP8266 Bomb Clock یک ساعت رومیزی دکوراتیو با طراحی �
 | Passive Buzzer | GND | GND |
 | Push Button (Stop) | پایه ۱ | D5 |
 | Push Button (Stop) | پایه ۲ | GND |
+
+ ##🔌 شماتیک اتصالات (Wiring Diagram) اضافه شده در نسخه v1.1.0 
+ 
+ | قطعه | پایه قطعه | پایه ESP8266 |
+|---|---|---|
+| Relay module | IN | D6 |
+| Relay module | VCC | 3.3V |
+| Relay module | GND | GND |
+
 ---
 
 ⚠️ نکته درباره اتصالات
