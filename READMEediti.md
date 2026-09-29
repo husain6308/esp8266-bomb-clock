@@ -221,32 +221,28 @@ flowchart TD
 <p dir="rtl">پس از باز شدن صفحه، پنل وب ساعت نمایش داده می‌شود.</p>
 
 <p dir="rtl">آدرس Web Server در هر دو نسخه یکسان است.</p>
----
-
-🌐 Web Server
-
-این نسخه دارای Web Server داخلی ESP8266 است.
-
-ESP8266 پس از راه‌اندازی، یک شبکه Wi-Fi ایجاد می‌کند و برای دسترسی به پنل تنظیمات نیازی به مودم یا اینترنت ندارد.
-
-Wi-Fi Access Point
-
-SSID: ESP8266-Clock
-Password: 12345678
-
-ورود به Web Server
-
-ابتدا با گوشی یا دستگاه دیگر به شبکه زیر متصل شوید:
-
-ESP8266-Clock
-
-سپس مرورگر را باز کرده و آدرس زیر را وارد کنید:
-
-http://192.168.4.1
-
-پس از باز شدن صفحه، پنل وب ساعت نمایش داده می‌شود.
 
 ---
+
+<h3 dir="rtl">🖥️ صفحه‌ی Settings در Web Server</h3>
+
+<p dir="rtl">صفحه‌ی تنظیمات از آدرس <code>http://192.168.4.1/settings</code> باز می‌شود و با تم صورتی طراحی شده است.</p>
+
+<table dir="rtl">
+<tr><th>مورد</th><th>v1.0.0</th><th>v1.1.0</th></tr>
+<tr><td>ظاهر صفحه</td><td>یک صفحه‌ی ساده با دو بخش تنظیم ساعت و تنظیم آلارم</td><td>سه کارت جدا: Clock، Alarm و Relay</td></tr>
+<tr><td>تنظیم ساعت</td><td>Hour و Minute</td><td>Hour، Minute و Second</td></tr>
+<tr><td>تنظیم آلارم</td><td>Hour و Minute</td><td>Hour و Minute</td></tr>
+<tr><td>نمایش آلارم فعلی</td><td>ندارد</td><td>دارد (مثلاً <code>Alarm: 16:18</code>)</td></tr>
+<tr><td>دکمه‌ها</td><td>Set Time، Set Alarm، Reset Alarm، Back</td><td>Set Time، Set Alarm، Reset Alarm، Back</td></tr>
+<tr><td>کنترل رله</td><td>ندارد</td><td>کلید ON/OFF</td></tr>
+</table>
+
+<p dir="rtl">در هر دو نسخه، ساعت و دقیقه‌ی آلارم از منوی کشویی انتخاب می‌شود و پس از زدن دکمه‌ی <b>Set Alarm</b> ذخیره می‌شود. برای حذف آلارم از دکمه‌ی <b>Reset Alarm</b> و برای بازگشت به صفحه‌ی اصلی از دکمه‌ی <b>Back</b> استفاده کنید.</p>
+
+---
+
+
 
 ⚙️ تنظیم ساعت و آلارم
 
