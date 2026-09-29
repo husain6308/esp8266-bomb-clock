@@ -139,46 +139,62 @@ ESP8266 Bomb Clock
 
 <h3 dir="rtl">ساختار کلی سیستم:</h3>
 
-
-
-                ┌──────────────┐
-                │    DS1307    │
-                │     RTC      │
-                └──────┬───────┘
-                       │
-                       │ Time
-                       ▼
-                ┌──────────────┐
-                │   ESP8266    │
-                │  Controller  │
-                └──────┬───────┘
-                       │
-              ┌────────┴────────┐
-              │                 │
-              ▼                 ▼
-       ┌──────────────┐  ┌──────────────┐
-       │    TM1637    │  │    Buzzer    │
-       │   Display    │  │    Alarm     │
-       └──────────────┘  └──────┬───────┘
-                                │
-                                │
-                           ┌────▼─────┐
-                           │    D5    │
-                           │   STOP   │
-                           └──────────┘
-
 ```mermaid
 flowchart TD
-    RTC["⏰ DS1307 RTC<br/>نگهداری زمان"] -->|زمان| ESP["🧠 ESP8266<br/>کنترلر اصلی"]
-    ESP --> LCD["🔢 TM1637<br/>نمایش ساعت"]
-    ESP --> BUZ["🔔 Passive Buzzer<br/>صدای آلارم"]
-    ESP --> REL["⚡ Relay Module<br/>پایه D6"]
-    BTN["🔘 دکمه Stop<br/>پایه D5"] -->|قطع آلارم| ESP
-    WEB["📱 Web Server<br/>192.168.4.1"] <-->|تنظیمات و کنترل رله| ESP
-```
+    RTC["⏰ DS1307 RTC<br/>Time Keeping"] -->|Time| ESP["🧠 ESP8266<br/>Controller"]
+    ESP --> LCD["🔢 TM1637<br/>Display"]
+    ESP --> BUZ["🔔 Passive Buzzer<br/>Alarm"]
+    BTN["🔘 Stop Button<br/>D5"] -->|Stop Alarm| ESP
+    ESP -.->|"v1.1.0"| REL["⚡ Relay Module<br/>D6 - NEW in v1.1.0"]
+    WEB["📱 Web Server<br/>192.168.4.1"] <-.->|"v1.1.0: Relay Control"| ESP
 
-<p dir="rtl">ESP8266 زمان را از <b>DS1307</b> می‌گیرد، روی <b>TM1637</b> نمایش می‌دهد، هنگام آلارم بازر را روشن می‌کند و در ۵ ثانیه‌ی پایانی رله (D6) را فعال می‌کند. با دکمه‌ی <b>Stop</b> (D5) آلارم قطع می‌شود و از طریق <b>Web Server</b> هم می‌توان تنظیمات را تغییر داد و رله را دستی کنترل کرد.</p>
----
+    style REL fill:#1f6feb,stroke:#58a6ff,color:#fff
+    linkStyle 5,6 stroke:#58a6ff,stroke-width:2px,stroke-dasharray:5
+```
+<h3 dir="rtl">📌 تفاوت نسخه‌ها</h3>
+
+<table dir="rtl">
+<tr>
+<th>ویژگی</th>
+<th>v1.0.0</th>
+<th>v1.1.0</th>
+</tr>
+<tr>
+<td>نمایش ساعت با TM1637</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>آلارم با Passive Buzzer</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>دکمه‌ی Stop</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>ماژول رله (D6)</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>کنترل دستی رله از Web Server</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>چشمک زدن نمایشگر هنگام آلارم</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>صفحه‌ی Settings گسترده‌تر</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+</table>
 
 🌐 Web Server
 
