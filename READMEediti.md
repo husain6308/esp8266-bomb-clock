@@ -196,6 +196,34 @@ flowchart TD
 
 ---
 
+<h3 dir="rtl">🖥️ صفحه‌ی Settings در Web Server</h3>
+
+<p dir="rtl">صفحه‌ی تنظیمات از آدرس <code>http://192.168.4.1/settings</code> باز می‌شود و با تم صورتی طراحی شده است.</p>
+
+<h4 dir="rtl">نسخه v1.0.0</h4>
+
+<p dir="rtl">یک صفحه‌ی ساده شامل تنظیم ساعت و تنظیم آلارم:</p>
+
+<ul dir="rtl">
+<li>تنظیم ساعت: <b>Hour</b> و <b>Minute</b> با دکمه‌ی <b>Set Time</b></li>
+<li>تنظیم آلارم: <b>Hour</b> و <b>Minute</b> با دکمه‌ی <b>Set Alarm</b></li>
+<li>دکمه‌ی <b>Reset Alarm</b> برای حذف آلارم</li>
+<li>دکمه‌ی <b>Back</b> برای بازگشت به صفحه‌ی اصلی</li>
+</ul>
+
+<h4 dir="rtl">اضافه‌شده در نسخه v1.1.0</h4>
+
+<ul dir="rtl">
+<li>صفحه به سه کارت جدا تقسیم شده است: <b>Clock</b>، <b>Alarm</b> و <b>Relay</b></li>
+<li>تنظیم <b>Second</b> (ثانیه) به بخش Clock اضافه شده است</li>
+<li>نمایش آلارم فعلی زیر دکمه‌ی Set Alarm (مثلاً <code>Alarm: 16:18</code>)</li>
+<li>کلید <b>ON/OFF</b> برای کنترل دستی رله</li>
+</ul>
+
+<p dir="rtl">در هر دو نسخه، ساعت و دقیقه از منوی کشویی انتخاب می‌شود و تنظیمات آلارم در حافظه‌ی <b>EEPROM</b> ذخیره می‌شود.</p>
+
+
+
 <h2 dir="rtl">🌐 Web Server</h2>
 
 <p dir="rtl">هر دو نسخه‌ی پروژه دارای Web Server داخلی ESP8266 هستند.</p>
