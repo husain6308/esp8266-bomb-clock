@@ -145,12 +145,10 @@ flowchart TD
     ESP --> LCD["🔢 TM1637<br/>Display"]
     ESP --> BUZ["🔔 Passive Buzzer<br/>Alarm"]
     BTN["🔘 Stop Button<br/>D5"] -->|Stop Alarm| ESP
-    ESP -.->|"v1.1.0"| REL["⚡ Relay Module<br/>D6 - NEW in v1.1.0"]
-    WEB["📱 Web Server<br/>192.168.4.1"] <-.->|"v1.1.0: Relay Control"| ESP
-
-    style REL fill:#1f6feb,stroke:#58a6ff,color:#fff
-    linkStyle 5,6 stroke:#58a6ff,stroke-width:2px,stroke-dasharray:5
+    ESP -.->|v1.1.0| REL["⚡ Relay Module<br/>D6 - NEW in v1.1.0"]
+    WEB["📱 Web Server<br/>192.168.4.1"] -.->|"v1.1.0: Relay Control"| ESP
 ```
+
 <h3 dir="rtl">📌 تفاوت نسخه‌ها</h3>
 
 <table dir="rtl">
