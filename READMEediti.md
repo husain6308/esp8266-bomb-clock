@@ -1,454 +1,271 @@
-[
-
-![Release](https://img.shields.io/github/v/release/husain6308/esp8266-bomb-clock?label=Release)
-
-](https://github.com/husain6308/esp8266-bomb-clock/releases)
-[
-
-![License](https://img.shields.io/github/license/husain6308/esp8266-bomb-clock)
-
-](LICENSE)
-[
-
-![GitHub repo](https://img.shields.io/badge/GitHub-Repository-black?logo=github)
-
-](https://github.com/husain6308/esp8266-bomb-clock)
+[![Release](https://img.shields.io/github/v/release/husain6308/esp8266-bomb-clock?label=Release)](https://github.com/husain6308/esp8266-bomb-clock/releases)
+[![License](https://img.shields.io/github/license/husain6308/esp8266-bomb-clock)](LICENSE)
+[![GitHub repo](https://img.shields.io/badge/GitHub-Repository-black?logo=github)](https://github.com/husain6308/esp8266-bomb-clock)
 
 # ESP8266 Bomb Clock
+
+<div dir="rtl">
+
+## معرفی پروژه
+
+**ESP8266 Bomb Clock** یک ساعت رومیزی دکوراتیو با طراحی الهام‌گرفته از بمب ساعتی خیالی است که با استفاده از برد **NodeMCU Amica ESP8266** ساخته شده است.
+
+هدف پروژه، ساخت یک وسیله الکترونیکی سرگرم‌کننده و دکوراتیو برای قرار دادن روی میز کار است.
+
+این پروژه از ماژول **DS1307 RTC** برای نگهداری زمان، نمایشگر **TM1637 چهاررقمی** برای نمایش ساعت و **Passive Buzzer** برای ایجاد افکت صوتی آلارم استفاده می‌کند.
+
+در نسخه **v1.1.0** قابلیت‌های جدیدی از جمله کنترل رله، کنترل رله از طریق Web Server، سیستم آلارم بهبودیافته و سورس کامل Arduino به پروژه اضافه شده است.
+
+این پروژه صرفاً یک پروژه DIY، سرگرمی، آموزشی و دکوراتیو است.
+
+</div>
+
+---
+
+<div dir="ltr">
 
 ## 📚 Documentation
 
 - [Hardware Documentation](HARDWARE.md)
 - [Firmware Documentation](FIRMWARE.md)
 - [Changelog](CHANGELOG.md)
+- [Contributing](CONTRIBUTING.md)
+- [Security Policy](SECURITY.md)
 - [License](LICENSE)
 
----
-
-<h2 dir="rtl">💣 معرفی پروژه</h2>
-
-<p dir="rtl"><b>ESP8266 Bomb Clock</b> یک ساعت رومیزی دکوراتیو با طراحی الهام‌گرفته از بمب ساعتی است که با استفاده از برد <b>NodeMCU Amica ESP8266</b> ساخته شده است.</p>
-
-<p dir="rtl">هدف این پروژه، ایجاد یک وسیله الکترونیکی سرگرم‌کننده و دکوراتیو برای قرار دادن روی میز کار است.</p>
-
-<p dir="rtl">زمان توسط ماژول <b>DS1307 RTC</b> نگهداری می‌شود و ساعت روی نمایشگر <b>TM1637</b> چهاررقمی نمایش داده می‌شود.</p>
-
-<p dir="rtl">برای ایجاد افکت صوتی آلارم نیز از یک <b>Passive Buzzer</b> استفاده شده است. صدای آلارم به‌صورت یک افکت هشدار و شمارش معکوس طراحی شده تا ظاهر و فضای بمب ساعتی پروژه را کامل کند.</p>
-
-<p dir="rtl">این پروژه صرفاً یک پروژه DIY، سرگرمی و دکوراتیو است.</p>
+</div>
 
 ---
 
-<h2 dir="rtl">📦 فریمور</h2>
+<div dir="rtl">
 
-<p dir="rtl">نسخه‌های موجود پروژه:</p>
+## 🆕 تغییرات نسخه v1.1.0
 
-<p dir="rtl">⬇️ <a href="https://github.com/husain6308/esp8266-bomb-clock/releases/download/V1.0.0/esp8266-bomb-clock-v1.0.bin">Download ESP8266 Bomb Clock v1.0.0</a></p>
+نسخه `v1.1.0` نسبت به نسخه `v1.0.0` شامل تغییرات و قابلیت‌های جدید زیر است:
 
-<ul dir="rtl">
-<li>نسخه: <code>v1.0.0</code></li>
-<li>برد هدف: <b>NodeMCU Amica ESP8266</b></li>
-<li>فایل: <code>esp8266-bomb-clock-v1.0.bin</code> (فریمور کامپایل‌شده)</li>
-</ul>
+- اضافه شدن پشتیبانی از رله روی `D6 / GPIO12`
+- اضافه شدن کنترل دستی رله از طریق Web Server
+- اضافه شدن کلید روشن/خاموش رله در صفحه Settings
+- اضافه شدن کنترل خودکار رله در زمان اجرای آلارم
+- امکان خاموش کردن هم‌زمان آلارم و رله با دکمه فیزیکی `D5`
+- بهبود الگوی صدای آلارم
+- کوتاه‌تر شدن فاصله بین Beepها با نزدیک شدن به پایان آلارم
+- فعال شدن صدای پیوسته در ۵ ثانیه پایانی آلارم
+- تغییر رفتار نمایشگر در زمان آلارم
+- امکان تنظیم ثانیه هنگام تنظیم ساعت از Web Server
+- تغییر نام شبکه Wi-Fi به `ESP8266-Clock-v1.1`
+- اضافه شدن سورس کامل Arduino به Repository
 
-<p dir="rtl">⬇️ <a href="https://github.com/husain6308/esp8266-bomb-clock/releases/download/V1.0.0/esp8266-bomb-clock-v1.1.ino">Download ESP8266 Bomb Clock v1.1.0</a></p>
+### سیستم آلارم نسخه v1.1.0
 
-<ul dir="rtl">
-<li>نسخه: <code>v1.1.0</code></li>
-<li>برد هدف: <b>NodeMCU Amica ESP8266</b></li>
-<li>فایل: <code>esp8266-bomb-clock-v1.1.ino</code> (سورس کد Arduino)</li>
-</ul>
+- شروع آلارم: ۴۰ ثانیه قبل از زمان تعیین‌شده
+- مدت کل آلارم: ۴۰ ثانیه
+- فرکانس Buzzer: `1000 Hz`
+- مدت هر Beep: `160 ms`
+- فاصله بین Beepها با گذشت زمان کمتر می‌شود.
+- در ۵ ثانیه پایانی، Buzzer به‌صورت پیوسته فعال است.
 
----
+### سیستم رله
 
-<h2 dir="rtl">✨ امکانات</h2>
+- پایه رله: `D6 / GPIO12`
+- تأخیر فعال شدن رله: ۳۵ ثانیه بعد از شروع آلارم
+- مدت روشن بودن رله: ۳۰ ثانیه
+- کنترل دستی رله از Web Server
+- دکمه `D5` می‌تواند آلارم و رله را متوقف کند.
 
-<ul dir="rtl">
-<li><b>NodeMCU Amica ESP8266</b></li>
-<li><b>DS1307 RTC</b> برای نگهداری زمان</li>
-<li>نمایش ساعت با <b>TM1637</b> چهاررقمی</li>
-<li><b>Passive Buzzer</b> برای آلارم</li>
-<li>کلید فیزیکی برای قطع آلارم</li>
-<li><b>Web Server</b> داخلی</li>
-<li>ایجاد شبکه <b>Wi-Fi</b> توسط خود ESP8266</li>
-<li>تنظیم ساعت از طریق مرورگر</li>
-<li>تنظیم آلارم از طریق مرورگر</li>
-<li>ذخیره تنظیمات در حافظه‌ی <b>EEPROM</b></li>
-<li>طراحی دکوراتیو با ظاهر بمب ساعتی</li>
-<li><b>Firmware</b> آماده برای ESP8266</li>
-<li>امکان نصب <b>Firmware</b> با گوشی <b>Android</b> بدون نیاز به کامپیوتر</li>
-</ul>
+### Web Server
 
-<h2 dir="rtl">🆕 تغییرات v1.1.0</h2>
+- نام Wi-Fi: `ESP8266-Clock-v1.1`
+- رمز Wi-Fi: `sain6308`
+- آدرس Web Server: `http://192.168.4.1`
+- تنظیم ساعت
+- تنظیم ثانیه
+- تنظیم آلارم
+- Reset Alarm
+- کنترل دستی Relay
 
-<ul dir="rtl">
-<li>اضافه شدن <b>رله</b> روی پایه <code>D6 / GPIO12</code> با منطق کامل کنترل</li>
-<li>روشن شدن خودکار رله هنگام آلارم و خاموش شدن خودکار آن</li>
-<li>روشن و خاموش کردن دستی رله از <b>Web Server</b></li>
-<li>قطع بازر، آلارم، رله و حالت دستی رله با دکمه‌ی <b>D5</b></li>
-<li>تغییر الگوی بازر: هرچه به پایان شمارش نزدیک‌تر شویم، فاصله‌ی بیپ‌ها کمتر می‌شود</li>
-<li>چشمک زدن نمایشگر هنگام آلارم، هماهنگ با الگوی بازر</li>
-<li>تغییر نام <b>Wi-Fi Access Point</b> و <b>Password</b></li>
-<li>گسترده‌تر شدن صفحه‌ی <b>Settings</b> (تنظیم ثانیه‌ی ساعت و کنترل رله)</li>
-<li>اضافه شدن سورس کامل <code>.ino</code> به Repository</li>
-</ul>
+### سورس کد
 
-<h3 dir="rtl">آنچه در v1.1.0 تغییر نکرده است</h3>
+سورس کامل نسخه `v1.1.0` در Repository قرار گرفته است:
 
-<table dir="rtl">
-<tr><th>بخش</th><th>مقدار</th></tr>
-<tr><td>برد</td><td>NodeMCU Amica ESP8266</td></tr>
-<tr><td>RTC</td><td>DS1307</td></tr>
-<tr><td>نمایشگر</td><td>TM1637</td></tr>
-<tr><td>بازر</td><td>Passive Buzzer</td></tr>
-<tr><td>دکمه‌ی توقف</td><td>D5</td></tr>
-<tr><td>TM1637 CLK / DIO</td><td>D2 (GPIO4) / D1 (GPIO5)</td></tr>
-<tr><td>DS1307 SCL / SDA</td><td>D1 (GPIO5) / D2 (GPIO4)</td></tr>
-<tr><td>بازر</td><td>D4 (GPIO2)</td></tr>
-<tr><td>آدرس Web Server</td><td>192.168.4.1</td></tr>
-<tr><td>ذخیره‌ی آلارم</td><td>EEPROM</td></tr>
-<tr><td>مدت آلارم</td><td>۴۰ ثانیه</td></tr>
-</table>
+`firmware/esp8266-bomb-clock-v1.1.ino`
+
+</div>
 
 ---
 
-<h2 dir="rtl">🧩 قطعات استفاده‌شده</h2>
+<div dir="ltr">
 
-<table dir="rtl">
-<tr><th>قطعه</th><th>توضیح</th></tr>
-<tr><td>NodeMCU Amica ESP8266</td><td>کنترلر اصلی</td></tr>
-<tr><td>DS1307 RTC</td><td>نگهداری زمان</td></tr>
-<tr><td>TM1637 4-Digit Display</td><td>نمایش ساعت</td></tr>
-<tr><td>Passive Buzzer</td><td>تولید صدای آلارم</td></tr>
-<tr><td>Push Button</td><td>قطع آلارم</td></tr>
-</table>
+## ✨ Features
 
-<h3 dir="rtl">🧩 قطعات اضافه‌شده در نسخه v1.1.0</h3>
+### Hardware
 
-<table dir="rtl">
-<tr><th>قطعه</th><th>توضیح</th></tr>
-<tr><td>Relay Module</td><td>روشن شدن هنگام آلارم و کنترل از طریق وب‌سرور</td></tr>
-</table>
+- NodeMCU Amica ESP8266
+- DS1307 Real-Time Clock
+- TM1637 4-digit display
+- Passive buzzer
+- Physical alarm stop button
+- Relay module on D6 / GPIO12
 
----
+### Clock System
 
-<h2 dir="rtl">🔌 شماتیک اتصالات (Wiring Diagram)</h2>
+- DS1307-based timekeeping
+- 24-hour clock display
+- Clock configuration through the Web Server
+- Hour, minute and second selection
+- Persistent alarm settings using EEPROM
 
-<table dir="rtl">
-<tr><th>قطعه</th><th>پایه قطعه</th><th>پایه ESP8266</th></tr>
-<tr><td>TM1637</td><td>CLK</td><td>D2</td></tr>
-<tr><td>TM1637</td><td>DIO</td><td>D1</td></tr>
-<tr><td>TM1637</td><td>VCC</td><td>3.3V</td></tr>
-<tr><td>TM1637</td><td>GND</td><td>GND</td></tr>
-<tr><td>DS1307</td><td>SCL</td><td>D1</td></tr>
-<tr><td>DS1307</td><td>SDA</td><td>D2</td></tr>
-<tr><td>DS1307</td><td>VCC</td><td>3.3V</td></tr>
-<tr><td>DS1307</td><td>GND</td><td>GND</td></tr>
-<tr><td>Passive Buzzer</td><td>I/O</td><td>D4</td></tr>
-<tr><td>Passive Buzzer</td><td>VCC</td><td>3.3V</td></tr>
-<tr><td>Passive Buzzer</td><td>GND</td><td>GND</td></tr>
-<tr><td>Push Button (Stop)</td><td>پایه ۱</td><td>D5</td></tr>
-<tr><td>Push Button (Stop)</td><td>پایه ۲</td><td>GND</td></tr>
-</table>
+### Alarm System
 
-<h3 dir="rtl">🔌 اتصالات اضافه‌شده در نسخه v1.1.0</h3>
+- Alarm starts 40 seconds before the configured alarm time
+- 40-second alarm sequence
+- 1000 Hz buzzer frequency
+- 160 ms beep duration
+- Decreasing beep intervals during the countdown
+- Continuous buzzer during the final 5 seconds
+- Physical alarm stop button
 
-<table dir="rtl">
-<tr><th>قطعه</th><th>پایه قطعه</th><th>پایه ESP8266</th></tr>
-<tr><td>Relay Module</td><td>IN</td><td>D6</td></tr>
-<tr><td>Relay Module</td><td>VCC</td><td>3.3V</td></tr>
-<tr><td>Relay Module</td><td>GND</td><td>GND</td></tr>
-</table>
+### Relay System
 
-<h3 dir="rtl">⚠️ نکته درباره اتصالات</h3>
+- Relay output on D6 / GPIO12
+- Automatic relay activation 35 seconds after alarm start
+- Automatic relay duration of 30 seconds
+- Manual relay ON/OFF control through the Web Server
+- Physical stop button can turn the relay OFF
 
-<p dir="rtl">پایه‌های GPIO استفاده‌شده در پروژه:</p>
+### Web Server
 
-<table dir="rtl">
-<tr><th>قطعه</th><th>پایه قطعه</th><th>پایه ESP8266</th></tr>
-<tr><td>TM1637 و DS1307</td><td>DIO و SCL</td><td>D1 / GPIO5</td></tr>
-<tr><td>TM1637 و DS1307</td><td>CLK و SDA</td><td>D2 / GPIO4</td></tr>
-<tr><td>Passive Buzzer</td><td>I/O</td><td>D4 / GPIO2</td></tr>
-<tr><td>Alarm Stop Button</td><td>پایه ۱</td><td>D5</td></tr>
-<tr><td>Alarm Stop Button</td><td>پایه ۲</td><td>GND</td></tr>
-<tr><td>Relay Module (v1.1.0)</td><td>IN</td><td>D6 / GPIO12</td></tr>
-</table>
+- Built-in ESP8266 Web Server
+- Standalone Wi-Fi Access Point
+- No external router or Internet connection required
+- Clock configuration
+- Alarm configuration
+- Alarm reset
+- Relay control
+- Clock seconds selection
+- Live clock display
+
+### Source Code
+
+- Complete Arduino `.ino` source code available
+- Source file:
+  `firmware/esp8266-bomb-clock-v1.1.ino`
+
+</div>
 
 ---
 
-<h2 dir="rtl">⏰ سیستم ساعت</h2>
+<div dir="rtl">
 
-<p dir="rtl">ماژول <b>DS1307 RTC</b> وظیفه نگهداری زمان را بر عهده دارد.</p>
+## 📦 نسخه‌های پروژه
 
-<p dir="rtl"><b>ESP8266</b> زمان را از DS1307 دریافت کرده و آن را روی نمایشگر <b>TM1637</b> نمایش می‌دهد.</p>
+### نسخه فعلی
 
-<h3 dir="rtl">ساختار کلی سیستم:</h3>
+**v1.1.0 — Source Code Release**
 
-```mermaid
-flowchart TD
-    RTC["⏰ DS1307 RTC<br/>Time Keeping"] -->|Time| ESP["🧠 ESP8266<br/>Controller"]
-    ESP --> LCD["🔢 TM1637<br/>Display"]
-    ESP --> BUZ["🔔 Passive Buzzer<br/>Alarm"]
-    BTN["🔘 Stop Button<br/>D5"] -->|Stop| ESP
-    ESP -.->|v1.1.0| REL["⚡ Relay Module<br/>D6 - NEW in v1.1.0"]
-    WEB["📱 Web Server<br/>192.168.4.1"] -.->|"v1.1.0: Relay Control"| ESP
-```
+نسخه فعلی به‌صورت سورس کامل Arduino در Repository قرار دارد.
 
-<p dir="rtl">خط‌چین‌ها در نمودار یعنی آن بخش فقط در نسخه <b>v1.1.0</b> وجود دارد.</p>
+فایل:
 
-<h3 dir="rtl">📌 تفاوت نسخه‌ها</h3>
+`firmware/esp8266-bomb-clock-v1.1.ino`
 
-<table dir="rtl">
-<tr><th>ویژگی</th><th>v1.0.0</th><th>v1.1.0</th></tr>
-<tr><td>نمایش ساعت با TM1637</td><td>دارد</td><td>دارد</td></tr>
-<tr><td>آلارم با Passive Buzzer</td><td>دارد</td><td>دارد</td></tr>
-<tr><td>مدت آلارم</td><td>۴۰ ثانیه</td><td>۴۰ ثانیه</td></tr>
-<tr><td>دکمه‌ی Stop (D5)</td><td>قطع آلارم</td><td>قطع آلارم، بازر و رله</td></tr>
-<tr><td>ماژول رله (D6)</td><td>ندارد</td><td>دارد</td></tr>
-<tr><td>کنترل دستی رله از Web Server</td><td>ندارد</td><td>دارد</td></tr>
-<tr><td>الگوی بازر</td><td>الگوی قبلی</td><td>فاصله‌ی بیپ‌ها رو به پایان کمتر می‌شود</td></tr>
-<tr><td>چشمک زدن نمایشگر هنگام آلارم</td><td>ندارد</td><td>دارد</td></tr>
-<tr><td>نام Wi-Fi</td><td>ESP8266-Clock</td><td>ESP8266-Clock-v1.1</td></tr>
-<tr><td>تنظیم ثانیه‌ی ساعت از وب</td><td>ندارد</td><td>دارد</td></tr>
-<tr><td>سورس کد (.ino)</td><td>در دسترس نیست</td><td>در دسترس است</td></tr>
-</table>
+### نسخه قبلی
+
+**v1.0.0 — Compiled Firmware**
+
+فایل کامپایل‌شده نسخه قبلی همچنان در Repository و Release مربوط به `v1.0.0` نگهداری می‌شود.
+
+</div>
 
 ---
 
-<h2 dir="rtl">🌐 Web Server</h2>
+<div dir="ltr">
 
-<p dir="rtl">ESP8266 پس از راه‌اندازی، یک شبکه Wi-Fi ایجاد می‌کند و برای دسترسی به پنل تنظیمات نیازی به مودم یا اینترنت ندارد.</p>
+## 🔌 Wiring Diagram
 
-<h3 dir="rtl">Wi-Fi Access Point</h3>
+| Component | Component Pin | ESP8266 Pin |
+|---|---|---|
+| TM1637 | CLK | D2 |
+| TM1637 | DIO | D1 |
+| TM1637 | VCC | 3.3V |
+| TM1637 | GND | GND |
+| DS1307 | SCL | D1 |
+| DS1307 | SDA | D2 |
+| DS1307 | VCC | 3.3V |
+| DS1307 | GND | GND |
+| Passive Buzzer | I/O | D4 |
+| Passive Buzzer | VCC | 3.3V |
+| Passive Buzzer | GND | GND |
+| Push Button (Stop) | Pin 1 | D5 |
+| Push Button (Stop) | Pin 2 | GND |
+| Relay Module | Control / IN | D6 |
+| Relay Module | VCC | According to module |
+| Relay Module | GND | GND |
 
-<table dir="rtl">
-<tr><th>نسخه</th><th>SSID</th><th>Password</th></tr>
-<tr><td>v1.0.0</td><td>ESP8266-Clock</td><td>12345678</td></tr>
-<tr><td>v1.1.0</td><td>ESP8266-Clock-v1.1</td><td>sain6308</td></tr>
-</table>
-
-<h3 dir="rtl">ورود به Web Server</h3>
-
-<ol dir="rtl">
-<li>با گوشی یا دستگاه دیگر به شبکه Wi-Fi ساعت متصل شوید.</li>
-<li>مرورگر را باز کنید و آدرس <code>http://192.168.4.1</code> را وارد کنید.</li>
-<li>پنل وب ساعت نمایش داده می‌شود.</li>
-</ol>
-
-<p dir="rtl">آدرس Web Server در هر دو نسخه یکسان است.</p>
-
----
-
-<h2 dir="rtl">⚙️ تنظیم ساعت و آلارم</h2>
-
-<p dir="rtl">از طریق Web Server می‌توان تنظیمات مربوط به ساعت و آلارم را انجام داد.</p>
-
-<h3 dir="rtl">امکانات نسخه v1.0.0</h3>
-
-<ul dir="rtl">
-<li>تنظیم ساعت</li>
-<li>تنظیم زمان آلارم</li>
-<li>مدیریت تنظیمات آلارم</li>
-<li>ذخیره تنظیمات</li>
-<li>مشاهده اطلاعات مربوط به ساعت و آلارم</li>
-</ul>
-
-<h3 dir="rtl">صفحه‌ی Settings در نسخه v1.1.0</h3>
-
-<table dir="rtl">
-<tr><th>بخش</th><th>امکانات</th></tr>
-<tr><td>Clock</td><td>Hour، Minute، Second</td></tr>
-<tr><td>Alarm</td><td>Hour، Minute، Reset Alarm</td></tr>
-<tr><td>Relay</td><td>کلید ON/OFF</td></tr>
-</table>
-
-<p dir="rtl">ساعت آلارم، دقیقه‌ی آلارم و فعال یا غیرفعال بودن آن در حافظه‌ی <b>EEPROM</b> ذخیره می‌شود تا پس از خاموش و روشن شدن دستگاه هم حفظ شود. این ویژگی در هر دو نسخه وجود دارد.</p>
+</div>
 
 ---
 
-<h2 dir="rtl">🚨 سیستم آلارم</h2>
+<div dir="rtl">
 
-<p dir="rtl">برای آلارم از یک <b>Passive Buzzer</b> استفاده شده است. صدای آلارم به‌صورت یک افکت هشدار و شمارش معکوس طراحی شده که با ظاهر بمب ساعتی پروژه هماهنگ است.</p>
+## ⚠️ نکته درباره اتصالات
 
-<p dir="rtl">آلارم را می‌توان با کلید فیزیکی متصل به <b>D5</b> متوقف کرد:</p>
+در نسخه `v1.1.0` از پایه‌های زیر استفاده می‌شود:
 
-```
-D5 ───── Push Button ───── GND
-```
+`D1` → TM1637 DIO
 
-<h3 dir="rtl">🔔 تنظیمات بازر در v1.1.0</h3>
+`D1` → DS1307 SCL
 
-<table dir="rtl">
-<tr><th>مورد</th><th>مقدار</th></tr>
-<tr><td>مدت کل آلارم</td><td>۴۰ ثانیه</td></tr>
-<tr><td>مدت هر بیپ</td><td>۱۶۰ میلی‌ثانیه</td></tr>
-<tr><td>فرکانس</td><td>1000Hz</td></tr>
-<tr><td>ثانیه ۳۵ تا ۴۰</td><td>بازر پیوسته</td></tr>
-</table>
+`D2` → TM1637 CLK
 
-<p dir="rtl">فاصله‌ی بین بیپ‌ها ثابت نیست و هرچه به پایان شمارش نزدیک‌تر شویم کمتر می‌شود.</p>
+`D2` → DS1307 SDA
 
-<p dir="rtl">نمایشگر هم در طول شمارش معکوس با الگوی بازر بین روشن و خاموش تغییر می‌کند و در ۵ ثانیه‌ی آخر روشن می‌ماند.</p>
+`D4` → Passive Buzzer
 
-<h3 dir="rtl">🔘 دکمه‌ی D5</h3>
+`D5` → Alarm Stop Button
 
-<p dir="rtl">در v1.0.0 دکمه فقط برای توقف آلارم بود. در v1.1.0 با فشردن آن:</p>
+`D6 / GPIO12` → Relay Control
 
-<ul dir="rtl">
-<li>بازر خاموش می‌شود.</li>
-<li>آلارم متوقف می‌شود.</li>
-<li>رله خاموش می‌شود.</li>
-<li>حالت دستی رله لغو می‌شود.</li>
-</ul>
+در این پروژه پایه‌های `D1` و `D2` به‌صورت مشترک برای TM1637 و DS1307 استفاده شده‌اند.
+
+قبل از ساخت سخت‌افزار، اتصال واقعی و نوع ماژول‌های مورد استفاده را بررسی کنید.
+
+رله این پروژه برای کاربردهای الکترونیکی عمومی و دکوراتیو در نظر گرفته شده است.
+
+</div>
 
 ---
 
-<h2 dir="rtl">⚡ سیستم رله (v1.1.0)</h2>
-
-<p dir="rtl">در نسخه‌ی v1.1.0 یک ماژول رله روی پایه <b>D6 / GPIO12</b> اضافه شده است. رله هنگام آلارم به‌صورت خودکار روشن و خاموش می‌شود و از طریق <b>Web Server</b> هم می‌توان آن را دستی روشن و خاموش کرد.</p>
-
-<h3 dir="rtl">زمان‌بندی آلارم و رله</h3>
-
-<p dir="rtl">آلارم <b>۴۰ ثانیه</b> قبل از زمان تعیین‌شده شروع می‌شود:</p>
-
-<table dir="rtl">
-<tr><th>زمان از شروع آلارم</th><th>اتفاق</th></tr>
-<tr><td>ثانیه ۰</td><td>شروع شمارش معکوس و بیپ‌ها</td></tr>
-<tr><td>ثانیه ۳۵</td><td>بازر پیوسته می‌شود و رله روشن می‌شود</td></tr>
-<tr><td>ثانیه ۴۰</td><td>پایان آلارم صوتی و رسیدن به زمان تعیین‌شده</td></tr>
-<tr><td>ثانیه ۶۵</td><td>رله خودکار خاموش می‌شود</td></tr>
-</table>
-
-<p dir="rtl"><b>نکته:</b> رله ۳۰ ثانیه روشن می‌ماند و از ثانیه ۳۵ تا ثانیه ۶۵ نسبت به شروع آلارم فعال است. بنابراین رله <b>۲۵ ثانیه بعد از پایان آلارم صوتی</b> هم هنوز روشن است.</p>
-
-<h3 dir="rtl">کنترل دستی رله</h3>
-
-<ul dir="rtl">
-<li>در صفحه‌ی <b>Settings</b> در Web Server یک کلید <b>ON/OFF</b> برای رله وجود دارد.</li>
-<li>با فشردن دکمه‌ی <b>D5</b>، رله خاموش و حالت دستی لغو می‌شود.</li>
-</ul>
-
----
-
-<h2 dir="rtl">📱 نصب Firmware با گوشی Android</h2>
-
-<p dir="rtl"><b>توجه:</b> این آموزش مربوط به فایل کامپایل‌شده‌ی <code>.bin</code> نسخه‌ی <b>v1.0.0</b> است. برای نسخه‌ی v1.1.0 باید فایل <code>.ino</code> را با Arduino IDE یا ArduinoDroid کامپایل و آپلود کنید.</p>
-
-<p dir="rtl">Firmware این پروژه را می‌توان بدون کامپیوتر و مستقیماً با گوشی Android روی ESP8266 نصب کرد. برنامه‌ی مورد استفاده <b>ESPFlash-ESP32/ESP8266Flasher</b> است که از فلش کردن از طریق USB OTG پشتیبانی می‌کند.</p>
-
-<p dir="rtl">Google Play: <a href="https://play.google.com/store/apps/details?id=io.serialflow.espflash">ESPFlash</a></p>
-
-<h3 dir="rtl">مراحل نصب</h3>
-
-<p dir="rtl">موارد مورد نیاز: گوشی Android، برد NodeMCU Amica ESP8266، کابل USB مناسب، مبدل USB OTG (در صورت نیاز) و فایل <code>esp8266-bomb-clock-v1.0.bin</code>.</p>
-
-<ol dir="rtl">
-<li>گوشی را از طریق USB به ESP8266 متصل کنید.</li>
-<li>برنامه‌ی ESPFlash را باز کنید و در قسمت <b>Firmware File</b> روی علامت <b>+</b> بزنید.</li>
-<li>در صفحه‌ی <b>Add Firmware</b> فایل <code>esp8266-bomb-clock-v1.0.bin</code> را از حافظه‌ی گوشی انتخاب کنید.</li>
-<li>مقدار <b>Address</b> را روی <code>0x0000</code> قرار دهید.</li>
-<li>گزینه‌ی <b>High-Speed Mode (Stub)</b> را فعال کنید. این گزینه سرعت انتقال را افزایش می‌دهد.</li>
-<li>گزینه‌ی <b>Firmware Compress</b> را فعال کنید. این گزینه به حالت High-Speed Mode وابسته است و زمان انتقال را کاهش می‌دهد.</li>
-<li>مقدار <b>Baudrate</b> را روی <code>115200</code> قرار دهید.</li>
-<li>روی دکمه‌ی <b>Upload / Flash</b> (علامت فلش رو به پایین) بزنید و منتظر بمانید تا عملیات کامل شود.</li>
-<li>پس از پایان موفقیت‌آمیز، ESP8266 را راه‌اندازی مجدد کنید. دستگاه باید به حالت ساعت و Web Server پروژه وارد شود.</li>
-</ol>
-
-<h3 dir="rtl">📌 تنظیمات Flash استفاده‌شده در این پروژه</h3>
-
-<table dir="rtl">
-<tr><th>مورد</th><th>مقدار</th></tr>
-<tr><td>Firmware</td><td>esp8266-bomb-clock-v1.0.bin</td></tr>
-<tr><td>Address</td><td>0x0000</td></tr>
-<tr><td>High-Speed Mode (Stub)</td><td>ON</td></tr>
-<tr><td>Firmware Compress</td><td>ON</td></tr>
-<tr><td>Baudrate</td><td>115200</td></tr>
-</table>
-
-<p dir="rtl"><i>این تنظیمات بر اساس روش واقعی استفاده‌شده برای نصب Firmware این پروژه ثبت شده‌اند. در صورت استفاده از Firmware یا برد متفاوت، ممکن است تنظیمات Flash متفاوت باشند.</i></p>
-
-<h3 dir="rtl">📷 تصویر برنامه Android</h3>
-
-<p dir="rtl">تصاویر زیر محیط برنامه‌ی ESPFlash-ESP32/ESP8266Flasher را نشان می‌دهند.</p>
-
-
-
-![Android ESPFlash Firmware Upload](images/App.update.file.android.jpg)
-
-
-
-
-
-![Android ESPFlash Environment](images/App.environment.jpg)
-
-
-
----
-
-<h2 dir="rtl">📷 تصاویر پروژه</h2>
-
-<h3 dir="rtl">نمای ظاهری</h3>
-
-
-
-![ESP8266 Bomb Clock](images/clock.jpg)
-
-
-
-
-
-![ESP8266 Bomb Clock](images/clock2.jpg)
-
-
-
-<h3 dir="rtl">تصاویر وب سرور</h3>
-
-
-
-![ESP8266 Bomb Clock Web Server](images/Web.clock.jpg)
-
-
-
-
-
-![ESP8266 Bomb Clock Web Server](images/Web.clock2.jpg)
-
-
-
----
-
-<h2 dir="rtl">💻 Source Code</h2>
-
-<ul dir="rtl">
-<li><b>v1.0.0:</b> فقط فایل کامپایل‌شده‌ی <code>.bin</code> موجود است و سورس اصلی Arduino در دسترس نیست. فایل <code>.bin</code> مانند <code>.ino</code> قابل ویرایش مستقیم نیست.</li>
-<li><b>v1.1.0:</b> سورس کامل در مسیر <code>firmware/esp8266-bomb-clock-v1.1.ino</code> موجود است.</li>
-</ul>
-
----
-
-<h2 dir="rtl">🛠️ وضعیت پروژه</h2>
-
-<p dir="rtl"><b>Project Status:</b> Completed / Archived Firmware</p>
-
-<p dir="rtl">این Repository برای نگهداری، پشتیبان‌گیری و مستندسازی پروژه ایجاد شده است.</p>
-
-<p dir="rtl">موارد موجود:</p>
-
-<ul dir="rtl">
-<li>Firmware کامپایل‌شده‌ی ESP8266 (v1.0.0)</li>
-<li>سورس کد کامل (v1.1.0)</li>
-<li>اطلاعات سخت‌افزار</li>
-<li>شماتیک اتصالات</li>
-<li>تصاویر پروژه</li>
-<li>تصاویر Web Server</li>
-<li>آموزش نصب Firmware با Android</li>
-<li>اطلاعات Web Server</li>
-</ul>
-
----
-
-<h2 dir="rtl">👤 سازنده</h2>
-
-<p dir="rtl"><b>HUSAIN</b></p>
-
-Designed, assembled and developed as a personal DIY electronics project.
+<div dir="ltr">
+
+## ⏰ Clock System
+
+The DS1307 RTC is responsible for keeping the current time.
+
+The ESP8266 reads the time from the RTC and displays it on the TM1637 4-digit display.
+
+```text
+                ┌──────────────┐
+                │    DS1307    │
+                │     RTC      │
+                └──────┬───────┘
+                       │
+                       │ Time
+                       ▼
+                ┌──────────────┐
+                │   ESP8266    │
+                │  Controller  │
+                └──────┬───────┘
+                       │
+              ┌────────┼─────────┐
+              │        │         │
+              ▼        ▼         ▼
+       ┌──────────┐ ┌────────┐ ┌────────┐
+       │  TM1637  │ │ Buzzer │ │ Relay  │
+       │ Display  │ │ Alarm  │ │ D6/GPIO12
+       └──────────┘ └───┬────┘ └────────┘
+                        │
+                   ┌────▼─────┐
+                   │    D5    │
+                   │   STOP   │
+                   └──────────┘
