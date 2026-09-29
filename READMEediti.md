@@ -110,7 +110,7 @@ ESP8266 Bomb Clock یک ساعت رومیزی دکوراتیو با طراحی �
 | Push Button (Stop) | پایه ۱ | D5 |
 | Push Button (Stop) | پایه ۲ | GND |
 
- ##🔌 شماتیک اتصالات (Wiring Diagram) اضافه شده در نسخه v1.1.0 
+##🔌 شماتیک اتصالات (Wiring Diagram) اضافه شده در نسخه v1.1.0 
  
  | قطعه | پایه قطعه | پایه ESP8266 |
 |---|---|---|
@@ -124,16 +124,14 @@ ESP8266 Bomb Clock یک ساعت رومیزی دکوراتیو با طراحی �
 
 در نسخه فعلی پروژه از این GPIOها استفاده شده است:
 
-D1 → TM1637 DIO
-D1 → DS1307 SCL
-
-D2 → TM1637 CLK
-D2 → DS1307 SDA
-
-D4 → Passive Buzzer
-
-D5 → Alarm Stop Button
-
+ | قطعه | پایه قطعه | پایه ESP8266 |
+|---|---|---|
+| TM1637 DS1307 | DIO SCL | D1 |
+| TM1637 DS1307 | CLK SDA | D2 |
+| Passive Buzzer| I/O | D4 |
+| Alarm Stop Button | پایه۱ | D5 |
+| Alarm Stop Button | پایه۲ | GND |
+| Relay module| IN | D6 |
 
 ---
 
