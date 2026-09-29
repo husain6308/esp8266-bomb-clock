@@ -14,10 +14,6 @@ The English translation is provided below.
 
 ESP8266 Bomb Clock
 
-A decorative ESP8266 desk clock inspired by the visual design of a fictional time bomb.
-
-The project uses an ESP8266 NodeMCU Amica, DS1307 RTC, TM1637 4-digit display and a passive buzzer to create a functional desk clock with a countdown-style alarm effect and a built-in web interface.
-
 ---
 
 معرفی پروژه
@@ -43,6 +39,13 @@ ESP8266 Bomb Clock یک ساعت رومیزی دکوراتیو با طراحی �
 - نسخه: `v1.0.0`
 - برد هدف: NodeMCU Amica ESP8266
 - فایل: `esp8266-bomb-clock-v1.0.bin`
+
+⬇️ [Download ESP8266 Bomb Clock v1.1.0](https://github.com/husain6308/esp8266-bomb-clock/releases/download/V1.0.0/esp8266-bomb-clock-v1.1.ino)
+مشخصات فریمور:
+- نسخه: `v1.1.0`
+- برد هدف: NodeMCU Amica ESP8266
+- فایل: `esp8266-bomb-clock-v1.1.bin`
+
 ---
 ✨ امکانات
 
