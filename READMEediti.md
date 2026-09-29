@@ -194,6 +194,35 @@ flowchart TD
 </tr>
 </table>
 
+---
+
+<h2 dir="rtl">🌐 Web Server</h2>
+
+<p dir="rtl">هر دو نسخه‌ی پروژه دارای Web Server داخلی ESP8266 هستند.</p>
+
+<p dir="rtl">ESP8266 پس از راه‌اندازی، یک شبکه Wi-Fi ایجاد می‌کند و برای دسترسی به پنل تنظیمات نیازی به مودم یا اینترنت ندارد.</p>
+
+<h3 dir="rtl">Wi-Fi Access Point</h3>
+
+<table dir="rtl">
+<tr><th>نسخه</th><th>SSID</th><th>Password</th></tr>
+<tr><td>v1.0.0</td><td><code>ESP8266-Clock</code></td><td><code>12345678</code></td></tr>
+<tr><td>v1.1.0</td><td><code>ESP8266-Clock-v1.1</code></td><td><code>sain6308</code></td></tr>
+</table>
+
+<h3 dir="rtl">ورود به Web Server</h3>
+
+<p dir="rtl">ابتدا با گوشی یا دستگاه دیگر به شبکه‌ی Wi-Fi مربوط به نسخه‌ی خود (طبق جدول بالا) متصل شوید.</p>
+
+<p dir="rtl">سپس مرورگر را باز کرده و آدرس زیر را وارد کنید:</p>
+
+<p dir="rtl"><code>http://192.168.4.1</code></p>
+
+<p dir="rtl">پس از باز شدن صفحه، پنل وب ساعت نمایش داده می‌شود.</p>
+
+<p dir="rtl">آدرس Web Server در هر دو نسخه یکسان است.</p>
+---
+
 🌐 Web Server
 
 این نسخه دارای Web Server داخلی ESP8266 است.
